@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyp2dlbs1b5nf"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/truffler/truffler.gd" id="1_5xvgk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ijwsf"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2cnej"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_epxoj"]
+size = Vector3(0.1, 0.1, 0.2)
+
+[node name="Truffler" type="CharacterBody3D"]
+script = ExtResource("1_5xvgk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ijwsf")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_2cnej")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -0.5)
+current = true
+
+[node name="Snout" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -0.0193425)
+mesh = SubResource("BoxMesh_epxoj")
+skeleton = NodePath("../..")

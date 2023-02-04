@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbe1nxiif2hwi"]
+
+[ext_resource type="Texture2D" uid="uid://gf446g2ece52" path="res://assets/hdri/preller_drive_1k.hdr" id="1_q6vey"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l4xtb"]
+size = Vector3(2, 8, 2)
+
+[sub_resource type="FogMaterial" id="FogMaterial_80ue5"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5x511"]
+panorama = ExtResource("1_q6vey")
+
+[sub_resource type="Sky" id="Sky_2eg17"]
+sky_material = SubResource("PanoramaSkyMaterial_5x511")
+
+[sub_resource type="Environment" id="Environment_qsu1m"]
+background_mode = 2
+sky = SubResource("Sky_2eg17")
+tonemap_mode = 2
+tonemap_white = 16.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0002
+volumetric_fog_ambient_inject = 3.0
+volumetric_fog_sky_affect = 0.02
+
+[node name="Tower" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+mesh = SubResource("BoxMesh_l4xtb")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 7, 4)
+visible = false
+light_color = Color(1, 0.843137, 0.635294, 1)
+light_energy = 12.0
+light_volumetric_fog_energy = 10000.0
+spot_range = 50.0
+spot_angle = 12.0
+
+[node name="Looky" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 9, 1)
+
+[node name="FogVolume" type="FogVolume" parent="Looky"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.5, 4.76837e-07)
+size = Vector3(8, 25, 8)
+shape = 1
+material = SubResource("FogMaterial_80ue5")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Looky/FogVolume"]
+transform = Transform3D(1, 0, 0, 0, -2.98023e-08, 1, 0, -1, -2.98023e-08, 0, 11, 9.53674e-07)
+light_color = Color(1, 0.827451, 0.741176, 1)
+light_energy = 0.005
+light_volumetric_fog_energy = 1000.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qsu1m")

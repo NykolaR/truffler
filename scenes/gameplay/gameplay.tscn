@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://ds4yvw8k60dxl"]
+
+[ext_resource type="PackedScene" uid="uid://dyp2dlbs1b5nf" path="res://scenes/gameplay/truffler/truffler.tscn" id="1_lruwe"]
+[ext_resource type="PackedScene" uid="uid://dbe1nxiif2hwi" path="res://scenes/gameplay/tower/tower.tscn" id="2_q1kx1"]
+[ext_resource type="Texture2D" uid="uid://gf446g2ece52" path="res://assets/hdri/preller_drive_1k.hdr" id="3_au3i3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qo2cy"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ln8p"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_i20qo"]
+panorama = ExtResource("3_au3i3")
+
+[sub_resource type="Sky" id="Sky_rpann"]
+sky_material = SubResource("PanoramaSkyMaterial_i20qo")
+
+[sub_resource type="Environment" id="Environment_6euul"]
+background_mode = 2
+sky = SubResource("Sky_rpann")
+tonemap_mode = 2
+tonemap_white = 16.0
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0, 0, 0, 1)
+volumetric_fog_ambient_inject = 0.01
+volumetric_fog_sky_affect = 0.15
+
+[sub_resource type="BoxMesh" id="BoxMesh_u8yex"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="FogMaterial" id="FogMaterial_cdlys"]
+albedo = Color(1, 0, 0, 1)
+
+[node name="Gameplay" type="Node3D"]
+
+[node name="Truffler" parent="." instance=ExtResource("1_lruwe")]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_qo2cy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_5ln8p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, 0.12941, -0.224144, 0, 0.866025, 0.5, 0.258819, -0.482963, 0.836516, -4, 3, 0)
+visible = false
+shadow_enabled = true
+
+[node name="Tower" parent="." instance=ExtResource("2_q1kx1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.768545, 0, -14.9124)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6euul")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, 7, -3)
+visible = false
+light_color = Color(1, 0.843137, 0.635294, 1)
+light_energy = 12.0
+light_volumetric_fog_energy = 64.0
+spot_range = 50.0
+spot_angle = 12.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.268271, 7.28485, 6.93236)
+mesh = SubResource("BoxMesh_u8yex")
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.880651, -0.473765, 0, 0.473765, 0.880651, 0, 5.14566, 6.01448)
+visible = false
+size = Vector3(8, 25, 8)
+shape = 1
+material = SubResource("FogMaterial_cdlys")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="FogVolume"]
+transform = Transform3D(1, 0, 0, 0, -2.98023e-08, 1, 0, -1, -2.98023e-08, 0, 11, 9.53674e-07)
+light_energy = 0.01
+light_volumetric_fog_energy = 1000.0
+shadow_enabled = true
