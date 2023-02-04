@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds4yvw8k60dxl"]
+[gd_scene load_steps=10 format=3 uid="uid://ds4yvw8k60dxl"]
 
 [ext_resource type="PackedScene" uid="uid://dyp2dlbs1b5nf" path="res://scenes/gameplay/truffler/truffler.tscn" id="1_lruwe"]
 [ext_resource type="PackedScene" uid="uid://dbe1nxiif2hwi" path="res://scenes/gameplay/tower/tower.tscn" id="2_q1kx1"]
@@ -28,9 +28,6 @@ volumetric_fog_sky_affect = 0.15
 
 [sub_resource type="BoxMesh" id="BoxMesh_u8yex"]
 size = Vector3(2, 2, 2)
-
-[sub_resource type="FogMaterial" id="FogMaterial_cdlys"]
-albedo = Color(1, 0, 0, 1)
 
 [node name="Gameplay" type="Node3D"]
 
@@ -68,16 +65,3 @@ spot_angle = 12.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.268271, 7.28485, 6.93236)
 mesh = SubResource("BoxMesh_u8yex")
-
-[node name="FogVolume" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.880651, -0.473765, 0, 0.473765, 0.880651, 0, 5.14566, 6.01448)
-visible = false
-size = Vector3(8, 25, 8)
-shape = 1
-material = SubResource("FogMaterial_cdlys")
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="FogVolume"]
-transform = Transform3D(1, 0, 0, 0, -2.98023e-08, 1, 0, -1, -2.98023e-08, 0, 11, 9.53674e-07)
-light_energy = 0.01
-light_volumetric_fog_energy = 1000.0
-shadow_enabled = true
