@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1iajft2xmxhp"
+path="res://.godot/imported/Squeal 1.ogg-02753c37a827b050ffa89decf360f56f.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Squeal 1.ogg"
+dest_files=["res://.godot/imported/Squeal 1.ogg-02753c37a827b050ffa89decf360f56f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cpfjcsmyor4po"
+path="res://.godot/imported/Oink 6.ogg-6754db26935815b111715a72d31675ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 6.ogg"
+dest_files=["res://.godot/imported/Oink 6.ogg-6754db26935815b111715a72d31675ab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
