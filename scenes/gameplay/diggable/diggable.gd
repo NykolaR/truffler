@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		pos2d.x = remap(pos2d.x, -0.5, 0.5, 0, 128)
 		pos2d.y = remap(pos2d.y, -0.5, 0.5, 0, 128)
 		dig_sprite.position = pos2d
-		dig_sprite.self_modulate.a = clamp(1.0 - local_pos.z, 0, 1)
+		dig_sprite.self_modulate.a = clamp(remap(local_pos.y, 0.8, 1.0, 0, 1), 0, 1)
 	else:
 		dig_sprite.self_modulate.a = 0.0
 

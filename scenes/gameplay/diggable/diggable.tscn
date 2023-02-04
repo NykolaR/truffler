@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ddfwug2avfemy"]
+[gd_scene load_steps=15 format=3 uid="uid://ddfwug2avfemy"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/diggable/diggable.gd" id="1_3ugmk"]
 [ext_resource type="Shader" path="res://scenes/gameplay/diggable/diggable.gdshader" id="2_8hbot"]
@@ -11,17 +11,6 @@ gradient = SubResource("Gradient_isvo0")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_f1qrr"]
-blend_mode = 4
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_1m0ji"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hlve4"]
-noise = SubResource("FastNoiseLite_1m0ji")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_mijhv"]
-viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Gradient" id="Gradient_4wffl"]
 colors = PackedColorArray(0.0388691, 0.0120887, 0.000485983, 1, 0.200539, 0.105504, 0.0603821, 1)
@@ -65,6 +54,8 @@ subdivide_depth = 10
 [sub_resource type="BoxShape3D" id="BoxShape3D_lejue"]
 size = Vector3(1.5, 0.5, 1.5)
 
+[sub_resource type="SphereMesh" id="SphereMesh_2w7ey"]
+
 [node name="Diggable" type="CSGBox3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 transparency = 1.0
@@ -91,16 +82,6 @@ self_modulate = Color(1, 1, 1, 0)
 position = Vector2(75, 50)
 texture = SubResource("GradientTexture2D_opuxv")
 
-[node name="Sprite2D2" type="Sprite2D" parent="SubViewport"]
-visible = false
-material = SubResource("CanvasItemMaterial_f1qrr")
-position = Vector2(50, 0)
-texture = SubResource("NoiseTexture2D_hlve4")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(332, 192)
-texture = SubResource("ViewportTexture_mijhv")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 material_override = SubResource("ShaderMaterial_hi7jt")
@@ -113,8 +94,12 @@ collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("BoxShape3D_lejue")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.507, 0, 0, 0, 0.507, 0, 0, 0, 0.507, 0, 0.207684, 0)
+mesh = SubResource("SphereMesh_2w7ey")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

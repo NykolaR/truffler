@@ -4,6 +4,7 @@
 size = Vector3(2, 8, 2)
 
 [sub_resource type="FogMaterial" id="FogMaterial_80ue5"]
+albedo = Color(1, 0.827451, 0.741176, 1)
 
 [node name="Tower" type="Node3D"]
 
