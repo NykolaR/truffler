@@ -6,17 +6,22 @@ var nose: Node3D = null
 @onready var dig_sprite: Sprite2D = $SubViewport/Sprite2D as Sprite2D
 @onready var viewport: SubViewport = $SubViewport as SubViewport
 
-const truffle = preload("res://scenes/gameplay/diggable/truffle.tscn")
+var flag = false
 
 func _ready() -> void:
 	viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_NEVER
-	var rand_int = randi_range(1, 31)
-	if rand_int == 1:
-		var truf = truffle.instantiate()
-		$truffle_spot.add_child(truf)
-		
-		
+	
+	
 func _physics_process(delta: float) -> void:
+	if not flag:
+		var ray: PhysicsRayQueryParameters3D = PhysicsRayQueryParameters3D.create(global_position, global_position + Vector3.DOWN * 100)
+		flag = true
+		var space_state = get_world_3d().direct_space_state
+		var result = space_state.intersect_ray(ray)
+		global_position = result.position
+		global_position.y -= .25
+		global_transform.basis.y = result.normal
+		
 	if nose:
 		var local_pos: Vector3 = to_local(nose.global_transform.origin)
 		var pos2d: Vector2 = Vector2(local_pos.x, local_pos.z)
@@ -27,11 +32,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		dig_sprite.self_modulate.a = 0.0
 
-
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if not nose:
 		nose = area
-
 
 func _on_area_3d_area_exited(area: Area3D) -> void:
 	if nose == area:

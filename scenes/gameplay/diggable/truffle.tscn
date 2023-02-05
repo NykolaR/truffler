@@ -43,8 +43,13 @@ mesh = SubResource("SphereMesh_yktc2")
 
 [node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
 strength = 5.0
-attenuation = 8.0
+attenuation = 2.0
 radius = 30.0
 
 [node name="GPUParticlesCollisionSphere3D" type="GPUParticlesCollisionSphere3D" parent="."]
 radius = 2.0
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.150321, 0, 0, 0, 1, 0, 0, 0, 0.180692, 0, 44.2174, 0)
+visible = false
+height = 94.8332
