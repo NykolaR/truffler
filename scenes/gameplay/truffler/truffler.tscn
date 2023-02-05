@@ -413,6 +413,7 @@ bus = &"SFX"
 stream = ExtResource("13_vdn2f")
 
 [node name="Eating" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Left" type="Label" parent="Eating"]
 anchors_preset = 9

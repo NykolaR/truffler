@@ -13,11 +13,11 @@ size = Vector3(10, 1, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ln8p"]
 size = Vector3(10, 1, 10)
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_i20qo"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_uiwx8"]
 panorama = ExtResource("3_au3i3")
 
 [sub_resource type="Sky" id="Sky_n6l8q"]
-sky_material = SubResource("PanoramaSkyMaterial_i20qo")
+sky_material = SubResource("PanoramaSkyMaterial_uiwx8")
 
 [sub_resource type="Environment" id="Environment_6euul"]
 background_mode = 2
@@ -48,7 +48,7 @@ size = Vector3(3, 3, 3)
 visible = false
 
 [node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 0.988842, -0.148966, 0, 0.148966, 0.988842, 0, -1, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 visible = false
@@ -77,16 +77,16 @@ light_volumetric_fog_energy = 64.0
 spot_range = 50.0
 spot_angle = 12.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.268271, 7.28485, 6.93236)
-mesh = SubResource("BoxMesh_u8yex")
-
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 0.989275, -0.146066, 0, 0.146066, 0.989275, 0, -1, 0)
 size = Vector3(10, 1, 10)
 
 [node name="Diggable" parent="CSGBox3D" instance=ExtResource("4_bmqoa")]
-transform = Transform3D(-0.834069, 0, 0.55166, 0, 1, 0, -0.55166, 0, -0.834069, 0, 0, -2)
+transform = Transform3D(-0.834069, 0.0908318, 0.544131, 8.9407e-08, 0.986352, -0.164652, -0.55166, -0.137331, -0.822686, 0.0592702, 0.856985, -2.08961)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.268271, 7.28485, 6.93236)
+mesh = SubResource("BoxMesh_u8yex")
 
 [node name="Truffle" parent="." instance=ExtResource("5_y6s3m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.59148, 7.33074, -12.6693)
