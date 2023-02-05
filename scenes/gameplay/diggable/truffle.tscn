@@ -1,37 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://cncgncur621o7"]
+[gd_scene load_steps=9 format=3 uid="uid://cncgncur621o7"]
 
-<<<<<<< HEAD
-[sub_resource type="Gradient" id="Gradient_uis6d"]
-colors = PackedColorArray(0, 0, 0, 1, 0.252028, 0.252028, 0.252028, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_3t0tk"]
-seed = 4568
-frequency = 0.25
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_03r36"]
-seamless = true
-color_ramp = SubResource("Gradient_uis6d")
-noise = SubResource("FastNoiseLite_3t0tk")
-
-[sub_resource type="Gradient" id="Gradient_8a8vl"]
-colors = PackedColorArray(0, 0, 0, 1, 0.877616, 0.877616, 0.877616, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_186os"]
-seed = 4568
-frequency = 0.25
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_oj2sl"]
-seamless = true
-color_ramp = SubResource("Gradient_8a8vl")
-noise = SubResource("FastNoiseLite_186os")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd8lh"]
-albedo_texture = SubResource("NoiseTexture2D_03r36")
-heightmap_enabled = true
-heightmap_texture = SubResource("NoiseTexture2D_oj2sl")
-
-[sub_resource type="SphereMesh" id="SphereMesh_yktc2"]
-=======
 [sub_resource type="Gradient" id="Gradient_ktxae"]
 colors = PackedColorArray(0, 0, 0, 1, 0.252028, 0.252028, 0.252028, 1)
 
@@ -62,33 +30,21 @@ heightmap_enabled = true
 heightmap_texture = SubResource("NoiseTexture2D_ympaa")
 
 [sub_resource type="SphereMesh" id="SphereMesh_wvwd2"]
->>>>>>> 9a238758dbce38b5ae9ec0e062e5d77e27568803
 radius = 0.1
 height = 0.2
 radial_segments = 16
 rings = 8
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_nel32"]
-radius = 0.2
-
-[node name="Truffle" type="Area3D"]
-collision_layer = 8
-collision_mask = 0
-monitoring = false
+[node name="Truffle" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-<<<<<<< HEAD
-material_override = SubResource("StandardMaterial3D_bd8lh")
-mesh = SubResource("SphereMesh_yktc2")
-=======
 material_override = SubResource("StandardMaterial3D_5xk2x")
 mesh = SubResource("SphereMesh_wvwd2")
->>>>>>> 9a238758dbce38b5ae9ec0e062e5d77e27568803
 
 [node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
 strength = 5.0
 attenuation = 8.0
 radius = 30.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_nel32")
+[node name="GPUParticlesCollisionSphere3D" type="GPUParticlesCollisionSphere3D" parent="."]
+radius = 2.0
