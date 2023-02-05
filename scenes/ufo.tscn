@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://dlh2f6afl6hvq"]
+
+[ext_resource type="PackedScene" uid="uid://cc3gp5th1jmwd" path="res://assets/models/ufo.gltf" id="1_44arp"]
+[ext_resource type="PackedScene" path="res://scenes/forbidden_light.tscn" id="2_a6mfu"]
+
+[sub_resource type="Animation" id="Animation_c6y54"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path3D/PathFollow3D/Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.258344), Vector3(0, 1.5708, -0.258309), Vector3(0, 3.14159, -0.258309), Vector3(0, 4.71239, -0.258309), Vector3(0, 6.28319, -0.258309)]
+}
+
+[sub_resource type="Animation" id="Animation_w8qmw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path3D/PathFollow3D/Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.258344)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1aag3"]
+_data = {
+"RESET": SubResource("Animation_w8qmw"),
+"new_animation": SubResource("Animation_c6y54")
+}
+
+[sub_resource type="Animation" id="Animation_ceu66"]
+resource_name = "new_2"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_0kq4a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s7sjr"]
+_data = {
+"RESET": SubResource("Animation_0kq4a"),
+"new_2": SubResource("Animation_ceu66")
+}
+
+[sub_resource type="Curve3D" id="Curve3D_0euda"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.52889, 0, -12.1498, 0, 0, 0, 0, 0, 0, -8.07618, 0, -8.45512, 0, 0, 0, 0, 0, 0, -11.2972, 0, -0.971037, 0, 0, 0, 0, 0, 0, -10.6814, 0, 4.0973, 0, 0, 0, 0, 0, 0, -6.70252, 0, 11.1551, 0, 0, 0, 0, 0, 0, -1.30261, 0, 14.2813, 0, 0, 0, 0, 0, 0, 6.08674, 0, 14.0919, 0, 0, 0, 0, 0, 0, 11.4393, 0, 10.4446, 0, 0, 0, 0, 0, 0, 13.0024, 0, 4.2394, 0, 0, 0, 0, 0, 0, 13.1919, 0, -2.29733, 0, 0, 0, 0, 0, 0, 8.40776, 0, -7.4604, 0, 0, 0, 0, 0, 0, 3.52889, 0, -12.0551),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 12
+
+[node name="ufo" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "new_animation"
+libraries = {
+"": SubResource("AnimationLibrary_1aag3")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+autoplay = "new_2"
+libraries = {
+"": SubResource("AnimationLibrary_s7sjr")
+}
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_0euda")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.303363, 0, -0.952872, 0, 1, 0, 0.952872, 0, 0.303363, 3.52889, 0, -12.1498)
+
+[node name="Node3D" type="Node3D" parent="Path3D/PathFollow3D"]
+transform = Transform3D(0.966814, 0.25548, 0, -0.25548, 0.966814, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="ufo" parent="Path3D/PathFollow3D/Node3D" instance=ExtResource("1_44arp")]
+transform = Transform3D(1, 0.00033924, 8.53539e-05, -0.000339091, 1, -0.00045763, -8.54731e-05, 0.00045757, 1, 0, 0, 0)
+
+[node name="ForbiddenLight" parent="Path3D/PathFollow3D/Node3D" instance=ExtResource("2_a6mfu")]
+transform = Transform3D(1, 2.98023e-08, -2.98023e-08, 0, 1, -7.45058e-09, 2.98023e-08, 7.45058e-09, 1, 0, 0, 0)
+color = Color(0.305882, 0.729412, 0.435294, 1)

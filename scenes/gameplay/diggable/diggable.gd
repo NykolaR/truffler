@@ -24,6 +24,7 @@ func _physics_process(delta: float) -> void:
 			#global_position.y -= .25
 			#global_transform.basis.y = result.normal
 			look_at(global_position + result.normal, Vector3.UP)
+			global_position.y -= .24
 		set_physics_process(false)
 	if nose:
 		var local_pos: Vector3 = to_local(nose.global_transform.origin)
