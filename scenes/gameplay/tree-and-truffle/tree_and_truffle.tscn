@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0jupieo2v7fd"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/tree-and-truffle/tree_and_truffle.gd" id="1_4x02a"]
+[ext_resource type="PackedScene" uid="uid://cgpbcgo4vsgwx" path="res://assets/models/trees.gltf" id="2_et5me"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rohns"]
+height = 2.48344
+radius = 0.904066
+
+[node name="TreeAndTruffle" type="StaticBody3D"]
+script = ExtResource("1_4x02a")
+
+[node name="trees" parent="." instance=ExtResource("2_et5me")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="tree001" parent="trees" index="1"]
+lod_bias = 0.1
+
+[node name="tree002" parent="trees" index="2"]
+lod_bias = 0.1
+
+[node name="tree003" parent="trees" index="3"]
+lod_bias = 0.1
+
+[node name="tree004" parent="trees" index="4"]
+lod_bias = 0.1
+
+[node name="tree005" parent="trees" index="5"]
+lod_bias = 0.1
+
+[node name="tree006" parent="trees" index="6"]
+lod_bias = 0.1
+
+[node name="tree007" parent="trees" index="7"]
+lod_bias = 0.1
+
+[node name="tree008" parent="trees" index="8"]
+lod_bias = 0.1
+
+[node name="tree010" parent="trees" index="9"]
+lod_bias = 0.1
+
+[node name="tree009" parent="trees" index="10"]
+lod_bias = 0.1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24231, 0)
+shape = SubResource("CylinderShape3D_rohns")
+
+[editable path="trees"]

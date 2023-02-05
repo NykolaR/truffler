@@ -1,0 +1,781 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3et8q07fadhk"]
+
+[ext_resource type="PackedScene" uid="uid://d0jupieo2v7fd" path="res://scenes/gameplay/tree-and-truffle/tree_and_truffle.tscn" id="1_2fpi4"]
+
+[node name="AllTheTrees" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -182.329, -0.0120925, -35.2163)
+
+[node name="TreeAndTruffle" parent="." instance=ExtResource("1_2fpi4")]
+tree = 10
+
+[node name="TreeAndTruffle2" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7851, 0, 12.1574)
+tree = 11
+
+[node name="TreeAndTruffle3" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7851, 0, 26.22)
+tree = 9
+
+[node name="TreeAndTruffle4" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7851, 0, 37.8285)
+tree = 9
+
+[node name="TreeAndTruffle5" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.350098, 0, 60.7808)
+tree = 11
+
+[node name="TreeAndTruffle6" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9384, 0, 67.5577)
+tree = 10
+
+[node name="TreeAndTruffle7" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2514, 0, 54.0262)
+tree = 9
+
+[node name="TreeAndTruffle8" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6898, -3.8147e-06, 27.9807)
+tree = 8
+
+[node name="TreeAndTruffle9" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9249, -7.62939e-06, 3.82934)
+tree = 8
+
+[node name="TreeAndTruffle10" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.0011, -7.62939e-06, 15.8934)
+tree = 9
+
+[node name="TreeAndTruffle11" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.0011, 0.868942, 39.8531)
+tree = 10
+
+[node name="TreeAndTruffle12" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.1169, -7.62939e-06, 64.6085)
+tree = 11
+
+[node name="TreeAndTruffle13" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.0499, -7.62939e-06, 28.8664)
+tree = 11
+
+[node name="TreeAndTruffle14" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.0499, -7.62939e-06, 47.9345)
+tree = 10
+
+[node name="TreeAndTruffle20" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.0721, -7.62939e-06, 73.3672)
+tree = 4
+
+[node name="TreeAndTruffle31" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.5076, -7.62939e-06, 55.7802)
+tree = 5
+
+[node name="TreeAndTruffle38" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.0578, 0.43081, 67.3286)
+tree = 5
+
+[node name="TreeAndTruffle39" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.969, 0.43081, 24.1878)
+tree = 5
+
+[node name="TreeAndTruffle32" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.6612, -7.62939e-06, 39.6101)
+tree = 6
+
+[node name="TreeAndTruffle33" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.6612, -7.62939e-06, 6.60951)
+tree = 7
+
+[node name="TreeAndTruffle34" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.363, -7.62939e-06, 6.60951)
+tree = 4
+
+[node name="TreeAndTruffle35" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.363, -7.62939e-06, 72.1139)
+tree = 5
+
+[node name="TreeAndTruffle36" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.363, -7.62939e-06, 59.7294)
+tree = 6
+
+[node name="TreeAndTruffle37" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.363, 2.73399, 39.5299)
+tree = 7
+
+[node name="TreeAndTruffle15" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.4203, -7.62939e-06, 4.37903)
+tree = 9
+
+[node name="TreeAndTruffle16" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 86.0436, 0, 23.6037)
+tree = 10
+
+[node name="TreeAndTruffle17" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 69.8986, 0, 25.4643)
+tree = 11
+
+[node name="TreeAndTruffle40" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 132.56, -3.8147e-06, 39.4822)
+tree = 5
+
+[node name="TreeAndTruffle41" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 137.804, 0.430814, 26.1043)
+tree = 5
+
+[node name="TreeAndTruffle42" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 137.425, -3.8147e-06, 53.9178)
+tree = 6
+
+[node name="TreeAndTruffle43" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 126.833, -3.8147e-06, 67.4588)
+tree = 7
+
+[node name="TreeAndTruffle44" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 118.495, -3.8147e-06, 54.1542)
+tree = 4
+
+[node name="TreeAndTruffle45" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 134.262, -3.8147e-06, 11.4418)
+tree = 5
+
+[node name="TreeAndTruffle46" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 135.403, 3.8147e-06, 77.3283)
+tree = 11
+
+[node name="TreeAndTruffle47" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.718, -7.62939e-06, 55.7802)
+tree = 5
+
+[node name="TreeAndTruffle48" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157.268, 0.43081, 67.3286)
+tree = 5
+
+[node name="TreeAndTruffle49" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178.179, 0.43081, 24.1878)
+tree = 5
+
+[node name="TreeAndTruffle50" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.871, -7.62939e-06, 39.6101)
+tree = 6
+
+[node name="TreeAndTruffle51" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.871, -7.62939e-06, 6.60951)
+tree = 7
+
+[node name="TreeAndTruffle52" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.573, -7.62939e-06, 6.60951)
+tree = 4
+
+[node name="TreeAndTruffle200" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999994, 0, -0.00352564, 0, 1, 0, 0.00352564, 0, -0.999994, 173.234, -7.62939e-06, -4.27392)
+tree = 7
+
+[node name="TreeAndTruffle201" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999994, 0, -0.00352564, 0, 1, 0, 0.00352564, 0, -0.999994, 157.532, -7.62939e-06, -4.21856)
+tree = 4
+
+[node name="TreeAndTruffle202" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.534057, 0, -0.845448, 0, 1, 0, 0.845448, 0, 0.534057, 127.617, -3.8147e-06, -8.94536)
+tree = 5
+
+[node name="TreeAndTruffle203" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999994, 0, -0.00352564, 0, 1, 0, 0.00352564, 0, -0.999994, 106.024, -7.62939e-06, -4.03696)
+tree = 7
+
+[node name="TreeAndTruffle204" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999994, 0, -0.00352564, 0, 1, 0, 0.00352564, 0, -0.999994, 90.3227, -7.62939e-06, -3.98161)
+tree = 4
+
+[node name="TreeAndTruffle53" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.573, -7.62939e-06, 72.1139)
+tree = 5
+
+[node name="TreeAndTruffle54" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.573, -7.62939e-06, 59.7294)
+tree = 6
+
+[node name="TreeAndTruffle55" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.573, 2.73399, 39.5299)
+tree = 7
+
+[node name="TreeAndTruffle56" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 153.254, 0, 23.6037)
+tree = 10
+
+[node name="TreeAndTruffle57" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 199.77, -3.8147e-06, 39.4822)
+tree = 5
+
+[node name="TreeAndTruffle58" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 205.014, 0.430814, 26.1043)
+tree = 5
+
+[node name="TreeAndTruffle59" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 204.635, -3.8147e-06, 53.9178)
+tree = 6
+
+[node name="TreeAndTruffle60" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 194.043, -3.8147e-06, 67.4588)
+tree = 7
+
+[node name="TreeAndTruffle61" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 185.704, -3.8147e-06, 54.1542)
+tree = 4
+
+[node name="TreeAndTruffle62" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.531073, 0, 0.847326, 0, 1, 0, -0.847326, 0, -0.531073, 201.472, -3.8147e-06, 11.4418)
+tree = 5
+
+[node name="TreeAndTruffle63" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 202.613, 3.8147e-06, 77.3283)
+tree = 11
+
+[node name="TreeAndTruffle64" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 217.194, 3.8147e-06, 63.939)
+tree = 0
+
+[node name="TreeAndTruffle75" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 231.327, -0.954586, 74.8053)
+tree = 0
+
+[node name="TreeAndTruffle76" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 239.539, -0.954586, 64.0551)
+tree = 0
+
+[node name="TreeAndTruffle70" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 226.018, 3.8147e-06, 39.6444)
+tree = 0
+
+[node name="TreeAndTruffle72" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 234.31, 3.8147e-06, 21.1173)
+tree = 0
+
+[node name="TreeAndTruffle65" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 217.194, 3.8147e-06, 46.19)
+
+[node name="TreeAndTruffle74" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 242.432, 0.964725, 47.1939)
+
+[node name="TreeAndTruffle69" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 227.532, 3.8147e-06, 59.5884)
+
+[node name="TreeAndTruffle68" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 222.3, -0.342404, -2.67099)
+
+[node name="TreeAndTruffle73" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 235.183, -0.342404, 9.3804)
+
+[node name="TreeAndTruffle66" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 222.558, 3.8147e-06, 28.1852)
+tree = 2
+
+[node name="TreeAndTruffle71" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 230.914, 3.8147e-06, 34.9835)
+tree = 2
+
+[node name="TreeAndTruffle67" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 227, 3.8147e-06, 15.3372)
+tree = 3
+
+[node name="TreeAndTruffle79" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 246.323, 3.8147e-06, 15.8136)
+tree = 2
+
+[node name="TreeAndTruffle80" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 245.747, 3.8147e-06, 29.6496)
+tree = 3
+
+[node name="TreeAndTruffle77" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 227, 3.8147e-06, 15.3372)
+tree = 3
+
+[node name="TreeAndTruffle78" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 247.35, 3.8147e-06, -1.09261)
+tree = 3
+
+[node name="TreeAndTruffle81" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 217.194, 3.8147e-06, 63.939)
+tree = 0
+
+[node name="TreeAndTruffle82" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 231.327, -0.954586, 74.8053)
+tree = 0
+
+[node name="TreeAndTruffle83" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 239.539, -0.954586, 64.0551)
+tree = 0
+
+[node name="TreeAndTruffle84" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 226.018, 3.8147e-06, 39.6444)
+tree = 0
+
+[node name="TreeAndTruffle85" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 234.31, 3.8147e-06, 21.1173)
+tree = 0
+
+[node name="TreeAndTruffle86" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 217.194, 3.8147e-06, 46.19)
+
+[node name="TreeAndTruffle87" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 242.432, 0.964725, 47.1939)
+
+[node name="TreeAndTruffle88" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 227.532, 3.8147e-06, 59.5884)
+
+[node name="TreeAndTruffle89" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 222.3, -0.342404, -2.67099)
+
+[node name="TreeAndTruffle90" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 235.183, -0.342404, 9.3804)
+
+[node name="TreeAndTruffle91" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 222.558, 3.8147e-06, 28.1852)
+tree = 2
+
+[node name="TreeAndTruffle92" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 230.914, 3.8147e-06, 34.9835)
+tree = 2
+
+[node name="TreeAndTruffle93" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 227, 3.8147e-06, 15.3372)
+tree = 3
+
+[node name="TreeAndTruffle94" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 246.323, 3.8147e-06, 15.8136)
+tree = 2
+
+[node name="TreeAndTruffle95" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 245.747, 3.8147e-06, 29.6496)
+tree = 3
+
+[node name="TreeAndTruffle96" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 227, 3.8147e-06, 15.3372)
+tree = 3
+
+[node name="TreeAndTruffle97" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998697, 0, -0.0510285, 0, 1, 0, 0.0510285, 0, 0.998697, 247.35, 3.8147e-06, -1.09261)
+tree = 3
+
+[node name="TreeAndTruffle98" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 286.86, 3.8147e-06, 1.75669)
+tree = 0
+
+[node name="TreeAndTruffle99" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 272.457, -0.954586, -8.74916)
+tree = 0
+
+[node name="TreeAndTruffle100" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 264.519, -0.954586, 2.20497)
+tree = 0
+
+[node name="TreeAndTruffle101" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 278.653, 3.8147e-06, 26.2664)
+tree = 0
+
+[node name="TreeAndTruffle102" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 270.831, 3.8147e-06, 44.997)
+tree = 0
+
+[node name="TreeAndTruffle103" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 287.309, 3.8147e-06, 19.5001)
+
+[node name="TreeAndTruffle104" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 262.054, 0.964725, 19.1338)
+
+[node name="TreeAndTruffle105" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 276.636, 3.8147e-06, 6.367)
+
+[node name="TreeAndTruffle106" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 283.439, -0.342404, 68.4744)
+
+[node name="TreeAndTruffle107" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 270.255, -0.342404, 56.7522)
+
+[node name="TreeAndTruffle108" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 282.401, 3.8147e-06, 37.6346)
+tree = 2
+
+[node name="TreeAndTruffle109" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 273.876, 3.8147e-06, 31.0494)
+tree = 2
+
+[node name="TreeAndTruffle110" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 278.285, 3.8147e-06, 50.5906)
+tree = 3
+
+[node name="TreeAndTruffle111" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 258.956, 3.8147e-06, 50.6024)
+tree = 2
+
+[node name="TreeAndTruffle112" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 259.182, 3.8147e-06, 36.7563)
+tree = 3
+
+[node name="TreeAndTruffle113" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 278.285, 3.8147e-06, 50.5906)
+tree = 3
+
+[node name="TreeAndTruffle114" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 258.356, 3.8147e-06, 67.5291)
+tree = 3
+
+[node name="TreeAndTruffle115" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 286.86, 3.8147e-06, 1.75669)
+tree = 0
+
+[node name="TreeAndTruffle116" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 272.457, -0.954586, -8.74916)
+tree = 0
+
+[node name="TreeAndTruffle117" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 264.519, -0.954586, 2.20497)
+tree = 0
+
+[node name="TreeAndTruffle118" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 278.653, 3.8147e-06, 26.2664)
+tree = 0
+
+[node name="TreeAndTruffle119" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 270.831, 3.8147e-06, 44.997)
+tree = 0
+
+[node name="TreeAndTruffle120" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 287.309, 3.8147e-06, 19.5001)
+
+[node name="TreeAndTruffle121" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 262.054, 0.964725, 19.1338)
+
+[node name="TreeAndTruffle122" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 276.636, 3.8147e-06, 6.367)
+
+[node name="TreeAndTruffle123" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 283.439, -0.342404, 68.4744)
+
+[node name="TreeAndTruffle124" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 270.255, -0.342404, 56.7522)
+
+[node name="TreeAndTruffle125" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 282.401, 3.8147e-06, 37.6346)
+tree = 2
+
+[node name="TreeAndTruffle126" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 273.876, 3.8147e-06, 31.0494)
+tree = 2
+
+[node name="TreeAndTruffle127" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 278.285, 3.8147e-06, 50.5906)
+tree = 3
+
+[node name="TreeAndTruffle128" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 258.956, 3.8147e-06, 50.6024)
+tree = 2
+
+[node name="TreeAndTruffle129" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 259.182, 3.8147e-06, 36.7563)
+tree = 3
+
+[node name="TreeAndTruffle130" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 278.285, 3.8147e-06, 50.5906)
+tree = 3
+
+[node name="TreeAndTruffle131" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.999667, 0, 0.0257929, 0, 1, 0, -0.0257929, 0, -0.999667, 258.356, 3.8147e-06, 67.5291)
+tree = 3
+
+[node name="TreeAndTruffle132" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 295.67, 3.8147e-06, 63.859)
+tree = 0
+
+[node name="TreeAndTruffle133" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 309.744, -0.954586, 74.8023)
+tree = 0
+
+[node name="TreeAndTruffle134" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 318.015, -0.954586, 64.0971)
+tree = 0
+
+[node name="TreeAndTruffle135" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 304.627, 3.8147e-06, 39.6129)
+tree = 0
+
+[node name="TreeAndTruffle136" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 313.02, 3.8147e-06, 21.1314)
+tree = 0
+
+[node name="TreeAndTruffle137" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 295.767, 3.8147e-06, 46.1103)
+
+[node name="TreeAndTruffle138" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 320.999, 0.964725, 47.252)
+
+[node name="TreeAndTruffle139" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 306.032, 3.8147e-06, 59.5649)
+
+[node name="TreeAndTruffle140" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 301.139, -0.342404, -2.72214)
+
+[node name="TreeAndTruffle141" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 313.957, -0.342404, 9.39945)
+
+[node name="TreeAndTruffle142" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 301.229, 3.8147e-06, 28.135)
+tree = 2
+
+[node name="TreeAndTruffle143" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 309.548, 3.8147e-06, 34.9789)
+tree = 2
+
+[node name="TreeAndTruffle144" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 305.742, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle145" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 325.062, 3.8147e-06, 15.8934)
+tree = 2
+
+[node name="TreeAndTruffle146" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 324.41, 3.8147e-06, 29.726)
+tree = 3
+
+[node name="TreeAndTruffle147" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 305.742, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle148" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 326.181, 3.8147e-06, -1.00694)
+tree = 3
+
+[node name="TreeAndTruffle149" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 295.67, 3.8147e-06, 63.859)
+tree = 0
+
+[node name="TreeAndTruffle150" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 309.744, -0.954586, 74.8023)
+tree = 0
+
+[node name="TreeAndTruffle151" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 318.015, -0.954586, 64.0971)
+tree = 0
+
+[node name="TreeAndTruffle152" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 304.627, 3.8147e-06, 39.6129)
+tree = 0
+
+[node name="TreeAndTruffle153" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 313.02, 3.8147e-06, 21.1314)
+tree = 0
+
+[node name="TreeAndTruffle154" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 295.767, 3.8147e-06, 46.1103)
+
+[node name="TreeAndTruffle155" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 320.999, 0.964725, 47.252)
+
+[node name="TreeAndTruffle156" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 306.032, 3.8147e-06, 59.5649)
+
+[node name="TreeAndTruffle157" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 301.139, -0.342404, -2.72214)
+
+[node name="TreeAndTruffle158" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 313.957, -0.342404, 9.39945)
+
+[node name="TreeAndTruffle159" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 301.229, 3.8147e-06, 28.135)
+tree = 2
+
+[node name="TreeAndTruffle160" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 309.548, 3.8147e-06, 34.9789)
+tree = 2
+
+[node name="TreeAndTruffle161" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 305.742, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle162" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 325.062, 3.8147e-06, 15.8934)
+tree = 2
+
+[node name="TreeAndTruffle163" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 324.41, 3.8147e-06, 29.726)
+tree = 3
+
+[node name="TreeAndTruffle164" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 305.742, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle165" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 326.181, 3.8147e-06, -1.00694)
+tree = 3
+
+[node name="TreeAndTruffle166" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 336.864, 3.8147e-06, 63.859)
+tree = 0
+
+[node name="TreeAndTruffle167" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 350.938, -0.954586, 74.8023)
+tree = 0
+
+[node name="TreeAndTruffle168" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 359.208, -0.954586, 64.0971)
+tree = 0
+
+[node name="TreeAndTruffle169" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 345.821, 3.8147e-06, 39.6129)
+tree = 0
+
+[node name="TreeAndTruffle170" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 354.214, 3.8147e-06, 21.1314)
+tree = 0
+
+[node name="TreeAndTruffle171" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 336.961, 3.8147e-06, 46.1103)
+
+[node name="TreeAndTruffle172" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 362.193, 0.964725, 47.252)
+
+[node name="TreeAndTruffle173" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 347.225, 3.8147e-06, 59.5649)
+
+[node name="TreeAndTruffle174" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 342.333, -0.342404, -2.72214)
+
+[node name="TreeAndTruffle175" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 355.151, -0.342404, 9.39945)
+
+[node name="TreeAndTruffle176" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 342.423, 3.8147e-06, 28.135)
+tree = 2
+
+[node name="TreeAndTruffle177" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 350.742, 3.8147e-06, 34.9789)
+tree = 2
+
+[node name="TreeAndTruffle178" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 346.936, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle179" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 366.256, 3.8147e-06, 15.8934)
+tree = 2
+
+[node name="TreeAndTruffle180" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 365.604, 3.8147e-06, 29.726)
+tree = 3
+
+[node name="TreeAndTruffle181" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 346.936, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle182" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 367.375, 3.8147e-06, -1.00694)
+tree = 3
+
+[node name="TreeAndTruffle183" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 336.864, 3.8147e-06, 63.859)
+tree = 0
+
+[node name="TreeAndTruffle184" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 350.938, -0.954586, 74.8023)
+tree = 0
+
+[node name="TreeAndTruffle185" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 359.208, -0.954586, 64.0971)
+tree = 0
+
+[node name="TreeAndTruffle186" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 345.821, 3.8147e-06, 39.6129)
+tree = 0
+
+[node name="TreeAndTruffle187" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 354.214, 3.8147e-06, 21.1314)
+tree = 0
+
+[node name="TreeAndTruffle188" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 336.961, 3.8147e-06, 46.1103)
+
+[node name="TreeAndTruffle189" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 362.193, 0.964725, 47.252)
+
+[node name="TreeAndTruffle190" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 347.225, 3.8147e-06, 59.5649)
+
+[node name="TreeAndTruffle191" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 342.333, -0.342404, -2.72214)
+
+[node name="TreeAndTruffle192" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 355.151, -0.342404, 9.39945)
+
+[node name="TreeAndTruffle193" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 342.423, 3.8147e-06, 28.135)
+tree = 2
+
+[node name="TreeAndTruffle194" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 350.742, 3.8147e-06, 34.9789)
+tree = 2
+
+[node name="TreeAndTruffle195" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 346.936, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle196" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 366.256, 3.8147e-06, 15.8934)
+tree = 2
+
+[node name="TreeAndTruffle197" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 365.604, 3.8147e-06, 29.726)
+tree = 3
+
+[node name="TreeAndTruffle198" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 346.936, 3.8147e-06, 15.3115)
+tree = 3
+
+[node name="TreeAndTruffle199" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(0.998404, 0, -0.0564834, 0, 1, 0, 0.0564834, 0, 0.998404, 367.375, 3.8147e-06, -1.00694)
+tree = 3
+
+[node name="TreeAndTruffle18" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 58.3797, 0, 17.3977)
+tree = 9
+
+[node name="TreeAndTruffle19" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 42.735, 0, 6.44199)
+tree = 9
+
+[node name="TreeAndTruffle21" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 19.8422, 0, 0.364189)
+tree = 10
+
+[node name="TreeAndTruffle22" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 23.2895, 0, 19.0311)
+tree = 9
+
+[node name="TreeAndTruffle23" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 44.9461, 0.773407, 33.5113)
+tree = 8
+
+[node name="TreeAndTruffle24" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 64.0206, -7.62939e-06, 48.3766)
+tree = 8
+
+[node name="TreeAndTruffle25" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 46.0643, 2.54344, 52.9865)
+tree = 9
+
+[node name="TreeAndTruffle26" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 26.4383, -7.62939e-06, 39.2428)
+tree = 10
+
+[node name="TreeAndTruffle27" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 2.0789, -7.62939e-06, 30.8714)
+tree = 11
+
+[node name="TreeAndTruffle28" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 26.8055, -7.62939e-06, 57.8718)
+tree = 11
+
+[node name="TreeAndTruffle29" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 11.1864, -7.62939e-06, 46.9339)
+tree = 10
+
+[node name="TreeAndTruffle30" parent="." instance=ExtResource("1_2fpi4")]
+transform = Transform3D(-0.573619, 0, -0.819122, 0, 1, 0, 0.819122, 0, -0.573619, 44.9303, -7.62939e-06, 74.6791)
+tree = 9

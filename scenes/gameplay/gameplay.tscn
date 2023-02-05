@@ -14,12 +14,12 @@ size = Vector3(10, 1, 10)
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_i20qo"]
 panorama = ExtResource("3_au3i3")
 
-[sub_resource type="Sky" id="Sky_rpann"]
+[sub_resource type="Sky" id="Sky_n6l8q"]
 sky_material = SubResource("PanoramaSkyMaterial_i20qo")
 
 [sub_resource type="Environment" id="Environment_6euul"]
 background_mode = 2
-sky = SubResource("Sky_rpann")
+sky = SubResource("Sky_n6l8q")
 tonemap_mode = 2
 tonemap_white = 16.0
 volumetric_fog_enabled = true
