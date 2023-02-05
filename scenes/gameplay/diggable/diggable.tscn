@@ -85,7 +85,7 @@ scale = Vector2(0.5, 0.5)
 texture = SubResource("GradientTexture2D_opuxv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.260326, 0)
+transform = Transform3D(1, 0, 0, 0, 0.659175, 0.751989, 0, -0.751989, 0.659175, 0, 0.260326, 0)
 material_override = SubResource("ShaderMaterial_hi7jt")
 mesh = SubResource("PlaneMesh_2xwgu")
 

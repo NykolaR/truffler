@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		var result = space_state.intersect_ray(ray)
 		global_position = result.position
 		global_position.y -= .25
-		global_transform.basis.y = result.normal
+		#global_transform.basis.y = Vector3(1,1,1).normalized()
 		
 	if nose:
 		var local_pos: Vector3 = to_local(nose.global_transform.origin)
