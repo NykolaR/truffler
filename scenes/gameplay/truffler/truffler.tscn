@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dyp2dlbs1b5nf"]
+[gd_scene load_steps=41 format=3 uid="uid://dyp2dlbs1b5nf"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/truffler/truffler.gd" id="1_5xvgk"]
 [ext_resource type="AudioStream" uid="uid://bwr0qkrpmcy42" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 1.ogg" id="2_tklm0"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://0liirfkqwjhs" path="res://assets/audio/sfx/Pig_Sniffs/Pig Sniff 1.ogg" id="10_io3w7"]
 [ext_resource type="AudioStream" uid="uid://c8574iyxcfdfu" path="res://assets/audio/sfx/Pig_Sniffs/Pig Sniff 2.ogg" id="11_v7fkt"]
 [ext_resource type="AudioStream" uid="uid://drxifqvekuq1d" path="res://assets/audio/sfx/Pig_Walking_Footsteps_Loop.ogg/Pig Walking Footsteps Loop.ogg" id="12_0p2wr"]
+[ext_resource type="AudioStream" uid="uid://nashqu6wc7n6" path="res://assets/audio/music/Truffling_Mini_Game_Music_Draft.wav" id="13_vdn2f"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ijwsf"]
 
@@ -361,3 +362,6 @@ libraries = {
 stream = ExtResource("12_0p2wr")
 autoplay = true
 bus = &"SFX"
+
+[node name="Eatin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_vdn2f")

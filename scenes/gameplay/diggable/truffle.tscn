@@ -43,7 +43,7 @@ mesh = SubResource("SphereMesh_5k6r4")
 
 [node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
 strength = 5.0
-attenuation = 2.0
+attenuation = 8.0
 radius = 30.0
 
 [node name="GPUParticlesCollisionSphere3D" type="GPUParticlesCollisionSphere3D" parent="."]

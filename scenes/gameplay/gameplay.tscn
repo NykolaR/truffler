@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ds4yvw8k60dxl"]
+[gd_scene load_steps=16 format=3 uid="uid://ds4yvw8k60dxl"]
 
 [ext_resource type="PackedScene" uid="uid://dyp2dlbs1b5nf" path="res://scenes/gameplay/truffler/truffler.tscn" id="1_lruwe"]
 [ext_resource type="PackedScene" uid="uid://dbe1nxiif2hwi" path="res://scenes/gameplay/tower/tower.tscn" id="2_q1kx1"]
@@ -25,16 +25,27 @@ sky = SubResource("Sky_n6l8q")
 tonemap_mode = 2
 tonemap_white = 16.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
-volumetric_fog_ambient_inject = 0.01
-volumetric_fog_sky_affect = 0.15
 
 [sub_resource type="BoxMesh" id="BoxMesh_u8yex"]
 size = Vector3(2, 2, 2)
 
+[sub_resource type="Gradient" id="Gradient_lt0ou"]
+offsets = PackedFloat32Array(0, 0.652174, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.0741688, 0.0741688, 0.0741688, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q68gi"]
+gradient = SubResource("Gradient_lt0ou")
+fill = 1
+fill_from = Vector2(0.5, 0.3)
+fill_to = Vector2(0.5, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hi5ru"]
+size = Vector3(3, 3, 3)
+
 [node name="Gameplay" type="Node3D"]
 
 [node name="Truffler" parent="." instance=ExtResource("1_lruwe")]
+visible = false
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -90,3 +101,21 @@ stream = ExtResource("6_qbmda")
 volume_db = -3.0
 autoplay = true
 bus = &"Music"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.994998, 0.0998928, 0, -0.0998928, 0.994998, 0.28771, 3.64249, -0.299679)
+visible = false
+light_energy = 0.003
+light_volumetric_fog_energy = 10000.0
+light_projector = SubResource("GradientTexture2D_q68gi")
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38419e-07, 1.81104)
+cast_shadow = 3
+mesh = SubResource("BoxMesh_hi5ru")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58673, 0.435158)
+cast_shadow = 3
+mesh = SubResource("BoxMesh_hi5ru")
