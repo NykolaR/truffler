@@ -6,10 +6,16 @@ var nose: Node3D = null
 @onready var dig_sprite: Sprite2D = $SubViewport/Sprite2D as Sprite2D
 @onready var viewport: SubViewport = $SubViewport as SubViewport
 
+const truffle = preload("res://scenes/gameplay/diggable/truffle.tscn")
+
 func _ready() -> void:
 	viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_NEVER
-
-
+	var rand_int = randi_range(1, 31)
+	if rand_int == 1:
+		var truf = truffle.instantiate()
+		$truffle_spot.add_child(truf)
+		
+		
 func _physics_process(delta: float) -> void:
 	if nose:
 		var local_pos: Vector3 = to_local(nose.global_transform.origin)
