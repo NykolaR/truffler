@@ -28,11 +28,11 @@ func _physics_process(delta: float) -> void:
 		set_physics_process(false)
 	if nose:
 		var local_pos: Vector3 = to_local(nose.global_transform.origin)
-		var pos2d: Vector2 = Vector2(local_pos.x, local_pos.z)
-		pos2d.x = remap(pos2d.x, -0.5, 0.5, 0, 32)
-		pos2d.y = remap(pos2d.y, -0.5, 0.5, 0, 32)
+		var pos2d: Vector2 = Vector2(local_pos.x, local_pos.y)
+		pos2d.x = remap(pos2d.x, -0.5, 0.5, 0, 128)
+		pos2d.y = remap(pos2d.y, -0.5, 0.5, 0, 128)
 		dig_sprite.position = pos2d
-		dig_sprite.self_modulate.a = clamp(remap(local_pos.y, 0.25, 0.5, 1.5, 0), 0, 1.5)
+		dig_sprite.self_modulate.a = clamp(remap(local_pos.z, 0.25, 0.5, 1.5, 0), 0, 1.5)
 	else:
 		dig_sprite.self_modulate.a = 0.0
 	
