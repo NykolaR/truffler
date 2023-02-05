@@ -1,7 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://dbe1nxiif2hwi"]
 
+[ext_resource type="Script" path="res://scenes/gameplay/tower/tower.gd" id="1_6cjct"]
 [ext_resource type="PackedScene" uid="uid://baojieagunmxa" path="res://assets/models/watchtower.gltf" id="1_dviiu"]
-[ext_resource type="PackedScene" path="res://scenes/forbidden_light.tscn" id="2_w74jm"]
+[ext_resource type="PackedScene" uid="uid://bx0yl4llswj0q" path="res://scenes/forbidden_light.tscn" id="2_w74jm"]
 [ext_resource type="AudioStream" uid="uid://ctqk1441d12sm" path="res://assets/audio/sfx/Scary_Bells_Mono.ogg/Scary Bells Mono.ogg" id="3_b2q2m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k4f0"]
@@ -69,10 +70,8 @@ _data = {
 "sweep": SubResource("Animation_h2vcd")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_rsprn"]
-size = Vector3(2.78447, 4.73346, 2.90168)
-
 [node name="Tower" type="Node3D"]
+script = ExtResource("1_6cjct")
 
 [node name="watchtower" parent="." instance=ExtResource("1_dviiu")]
 transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 0.7, 0, 2, 0)
@@ -125,10 +124,7 @@ libraries = {
 "": SubResource("AnimationLibrary_yit0h")
 }
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0116279, 2.32638, 0.000471115)
-shape = SubResource("BoxShape3D_rsprn")
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
 
 [editable path="watchtower"]
