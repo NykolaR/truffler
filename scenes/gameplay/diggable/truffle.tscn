@@ -1,6 +1,5 @@
 [gd_scene load_steps=9 format=3 uid="uid://cncgncur621o7"]
 
-
 [sub_resource type="Gradient" id="Gradient_ktxae"]
 colors = PackedColorArray(0, 0, 0, 1, 0.252028, 0.252028, 0.252028, 1)
 
@@ -31,7 +30,6 @@ heightmap_enabled = true
 heightmap_texture = SubResource("NoiseTexture2D_ympaa")
 
 [sub_resource type="SphereMesh" id="SphereMesh_wvwd2"]
-
 radius = 0.1
 height = 0.2
 radial_segments = 16
@@ -40,9 +38,8 @@ rings = 8
 [node name="Truffle" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-
-material_override = SubResource("StandardMaterial3D_bd8lh")
-mesh = SubResource("SphereMesh_yktc2")
+material_override = SubResource("StandardMaterial3D_5xk2x")
+mesh = SubResource("SphereMesh_wvwd2")
 
 [node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
 strength = 5.0

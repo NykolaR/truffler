@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://budgib54ndd6c"]
+[gd_scene load_steps=11 format=3 uid="uid://dlh2f6afl6hvq"]
 
 [ext_resource type="PackedScene" uid="uid://cc3gp5th1jmwd" path="res://assets/models/ufo.gltf" id="1_44arp"]
-[ext_resource type="PackedScene" uid="uid://bx0yl4llswj0q" path="res://scenes/forbidden_light.tscn" id="2_a6mfu"]
-[ext_resource type="AudioStream" uid="uid://ctwhnnrla1mry" path="res://assets/audio/sfx/Spaceship_Sound/Spaceship Loop.ogg" id="2_rffhl"]
+[ext_resource type="PackedScene" path="res://scenes/forbidden_light.tscn" id="2_a6mfu"]
+[ext_resource type="AudioStream" uid="uid://bm0tbcsow86js" path="res://assets/audio/sfx/Spaceship_Sound/Spaceship Loop.ogg" id="2_rffhl"]
 
 [sub_resource type="Animation" id="Animation_w8qmw"]
 length = 0.001
