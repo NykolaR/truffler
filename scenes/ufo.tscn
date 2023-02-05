@@ -1,7 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlh2f6afl6hvq"]
+[gd_scene load_steps=11 format=3 uid="uid://budgib54ndd6c"]
 
 [ext_resource type="PackedScene" uid="uid://cc3gp5th1jmwd" path="res://assets/models/ufo.gltf" id="1_44arp"]
-[ext_resource type="PackedScene" path="res://scenes/forbidden_light.tscn" id="2_a6mfu"]
+[ext_resource type="PackedScene" uid="uid://bx0yl4llswj0q" path="res://scenes/forbidden_light.tscn" id="2_a6mfu"]
+[ext_resource type="AudioStream" uid="uid://ctwhnnrla1mry" path="res://assets/audio/sfx/Spaceship_Sound/Spaceship Loop.ogg" id="2_rffhl"]
+
+[sub_resource type="Animation" id="Animation_w8qmw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path3D/PathFollow3D/Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.258344)]
+}
 
 [sub_resource type="Animation" id="Animation_c6y54"]
 resource_name = "new_animation"
@@ -20,25 +36,25 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, -0.258344), Vector3(0, 1.5708, -0.258309), Vector3(0, 3.14159, -0.258309), Vector3(0, 4.71239, -0.258309), Vector3(0, 6.28319, -0.258309)]
 }
 
-[sub_resource type="Animation" id="Animation_w8qmw"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1aag3"]
+_data = {
+"RESET": SubResource("Animation_w8qmw"),
+"new_animation": SubResource("Animation_c6y54")
+}
+
+[sub_resource type="Animation" id="Animation_0kq4a"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Path3D/PathFollow3D/Node3D:rotation")
+tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, -0.258344)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1aag3"]
-_data = {
-"RESET": SubResource("Animation_w8qmw"),
-"new_animation": SubResource("Animation_c6y54")
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_ceu66"]
@@ -56,21 +72,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_0kq4a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7sjr"]
@@ -104,13 +105,18 @@ libraries = {
 curve = SubResource("Curve3D_0euda")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.303363, 0, -0.952872, 0, 1, 0, 0.952872, 0, 0.303363, 3.52889, 0, -12.1498)
+transform = Transform3D(0.303364, 0, -0.952872, 0, 1, 0, 0.952872, 0, 0.303364, 3.52889, 0, -12.1498)
 
 [node name="Node3D" type="Node3D" parent="Path3D/PathFollow3D"]
 transform = Transform3D(0.966814, 0.25548, 0, -0.25548, 0.966814, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="ufo" parent="Path3D/PathFollow3D/Node3D" instance=ExtResource("1_44arp")]
 transform = Transform3D(1, 0.00033924, 8.53539e-05, -0.000339091, 1, -0.00045763, -8.54731e-05, 0.00045757, 1, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Path3D/PathFollow3D/Node3D/ufo"]
+transform = Transform3D(1, -0.00033772, -8.55029e-05, 0.000339121, 1, 0.000457615, 8.52942e-05, -0.0004576, 1, 0, 0, 0)
+stream = ExtResource("2_rffhl")
+autoplay = true
 
 [node name="ForbiddenLight" parent="Path3D/PathFollow3D/Node3D" instance=ExtResource("2_a6mfu")]
 transform = Transform3D(1, 2.98023e-08, -2.98023e-08, 0, 1, -7.45058e-09, 2.98023e-08, 7.45058e-09, 1, 0, 0, 0)

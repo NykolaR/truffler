@@ -46,7 +46,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_color = Color(1, 0.827451, 0.741176, 1)
-light_volumetric_fog_energy = 100.0
+light_volumetric_fog_energy = 500.0
 shadow_enabled = true
 omni_range = 30.0
 
