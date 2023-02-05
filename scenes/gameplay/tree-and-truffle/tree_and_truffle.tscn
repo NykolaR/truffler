@@ -56,46 +56,57 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_1dw7m")
 
 [node name="tree001" parent="trees" index="1"]
+visible = false
 material_override = SubResource("StandardMaterial3D_qlv8d")
 lod_bias = 0.1
 
 [node name="tree002" parent="trees" index="2"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kgurn")
 lod_bias = 0.1
 
 [node name="tree003" parent="trees" index="3"]
+visible = false
 material_override = SubResource("StandardMaterial3D_k2ci3")
 lod_bias = 0.1
 
 [node name="tree004" parent="trees" index="4"]
+visible = false
 material_override = SubResource("StandardMaterial3D_nj3sa")
 lod_bias = 0.1
 
 [node name="tree005" parent="trees" index="5"]
+visible = false
 material_override = SubResource("StandardMaterial3D_wj84s")
 lod_bias = 0.1
 
 [node name="tree006" parent="trees" index="6"]
+visible = false
 material_override = SubResource("StandardMaterial3D_8jx22")
 lod_bias = 0.1
 
 [node name="tree007" parent="trees" index="7"]
+visible = false
 material_override = SubResource("StandardMaterial3D_t3ffd")
 lod_bias = 0.1
 
 [node name="tree008" parent="trees" index="8"]
+visible = false
 material_override = SubResource("StandardMaterial3D_mlwr3")
 lod_bias = 0.1
 
 [node name="tree010" parent="trees" index="9"]
+visible = false
 material_override = SubResource("StandardMaterial3D_3ug1u")
 lod_bias = 0.1
 
 [node name="tree009" parent="trees" index="10"]
+visible = false
 material_override = SubResource("StandardMaterial3D_8x1o1")
 lod_bias = 0.1
 
 [node name="tree011" parent="trees" index="11"]
+visible = false
 material_override = SubResource("StandardMaterial3D_g0748")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
