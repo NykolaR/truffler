@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddfwug2avfemy"]
+[gd_scene load_steps=14 format=3 uid="uid://ddfwug2avfemy"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/diggable/diggable.gd" id="1_3ugmk"]
 [ext_resource type="Shader" path="res://scenes/gameplay/diggable/diggable.gdshader" id="2_8hbot"]
@@ -12,31 +12,31 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 
-[sub_resource type="Gradient" id="Gradient_4wffl"]
+[sub_resource type="Gradient" id="Gradient_6mpco"]
 colors = PackedColorArray(0.0388691, 0.0120887, 0.000485983, 1, 0.200539, 0.105504, 0.0603821, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_8jhcq"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_c0mvu"]
 noise_type = 3
 domain_warp_enabled = true
 domain_warp_type = 1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_msdao"]
 seamless = true
-color_ramp = SubResource("Gradient_4wffl")
-noise = SubResource("FastNoiseLite_8jhcq")
+color_ramp = SubResource("Gradient_6mpco")
+noise = SubResource("FastNoiseLite_c0mvu")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ecy8p"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="Gradient" id="Gradient_wkf16"]
+[sub_resource type="Gradient" id="Gradient_ox5hv"]
 offsets = PackedFloat32Array(0, 0.872549, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_l6w7d"]
-gradient = SubResource("Gradient_wkf16")
+gradient = SubResource("Gradient_ox5hv")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 0.104651)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hi7jt"]
 resource_local_to_scene = true
@@ -48,22 +48,19 @@ shader_parameter/dirt_tex = SubResource("NoiseTexture2D_msdao")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2xwgu"]
 size = Vector2(1, 1)
-subdivide_width = 10
-subdivide_depth = 10
+subdivide_width = 6
+subdivide_depth = 6
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lejue"]
-size = Vector3(1.5, 2, 1.5)
-
-[sub_resource type="SphereMesh" id="SphereMesh_2w7ey"]
+size = Vector3(1.2, 1.2, 1.5)
 
 [node name="Diggable" type="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 transparency = 1.0
 cast_shadow = 0
 operation = 2
 collision_layer = 0
 collision_mask = 4
-size = Vector3(0.886816, 1, 0.865085)
+size = Vector3(0.95, 0.95, 1)
 script = ExtResource("1_3ugmk")
 
 [node name="SubViewport" type="SubViewport" parent="."]
@@ -73,39 +70,34 @@ positional_shadow_atlas_quad_0 = 0
 positional_shadow_atlas_quad_1 = 0
 positional_shadow_atlas_quad_2 = 0
 positional_shadow_atlas_quad_3 = 0
-size = Vector2i(128, 128)
+size = Vector2i(32, 32)
 render_target_clear_mode = 1
-render_target_update_mode = 4
+render_target_update_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="SubViewport"]
 modulate = Color(1, 0, 0, 1)
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(75, 50)
-scale = Vector2(0.5, 0.5)
+position = Vector2(16, 16)
+scale = Vector2(0.1, 0.1)
 texture = SubResource("GradientTexture2D_opuxv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.659175, 0.751989, 0, -0.751989, 0.659175, 0, 0.260326, 0)
+
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
 material_override = SubResource("ShaderMaterial_hi7jt")
 mesh = SubResource("PlaneMesh_2xwgu")
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.060326, 0)
 collision_layer = 0
 collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("BoxShape3D_lejue")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.507, 0, 0, 0, 0.507, 0, 0, 0, 0.507, 0, 0.207684, 0)
-visible = false
-mesh = SubResource("SphereMesh_2w7ey")
-
 [node name="truffle_spot" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14732, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

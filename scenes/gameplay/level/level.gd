@@ -14,7 +14,7 @@ func _ready():
 				child_copy.add_to_group("dig_zone_2")
 			elif child_copy.global_position.x < 100:
 				child_copy.add_to_group("dig_zone_3")
-			else: 
+			else:
 				child_copy.add_to_group("dig_zone_4")
 	var group_1 = get_tree().get_nodes_in_group("dig_zone_1")
 	var group_2 = get_tree().get_nodes_in_group("dig_zone_2")
