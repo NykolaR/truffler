@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dyp2dlbs1b5nf"]
+[gd_scene load_steps=46 format=3 uid="uid://dyp2dlbs1b5nf"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/truffler/truffler.gd" id="1_5xvgk"]
 [ext_resource type="AudioStream" uid="uid://bwr0qkrpmcy42" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 1.ogg" id="2_tklm0"]
@@ -102,7 +102,7 @@ uv1_triplanar = true
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_rar32"]
-radius = 0.05
+radius = 0.1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hsvg"]
 
@@ -178,10 +178,18 @@ vertex_color_use_as_albedo = true
 albedo_texture = SubResource("NoiseTexture2D_ux60d")
 
 [sub_resource type="Gradient" id="Gradient_go7m2"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+colors = PackedColorArray(1, 1, 1, 0.286275, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_jmklu"]
 gradient = SubResource("Gradient_go7m2")
+
+[sub_resource type="Curve" id="Curve_6jgrg"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jjbp1"]
+curve = SubResource("Curve_6jgrg")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fgby7"]
 emission_shape = 1
@@ -189,6 +197,7 @@ emission_sphere_radius = 0.05
 gravity = Vector3(0, 0, 0)
 angle_min = -720.0
 angle_max = 720.0
+scale_curve = SubResource("CurveTexture_jjbp1")
 color = Color(1, 0.545098, 0.717647, 1)
 color_ramp = SubResource("GradientTexture1D_jmklu")
 hue_variation_min = -1.0
@@ -241,6 +250,44 @@ _data = {
 "me_sniff": SubResource("Animation_d7hoa")
 }
 
+[sub_resource type="Animation" id="Animation_lxgk3"]
+resource_name = "EAT"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eat:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9)]
+}
+
+[sub_resource type="Animation" id="Animation_mfdx6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eat:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ea7g5"]
+_data = {
+"EAT": SubResource("Animation_lxgk3"),
+"RESET": SubResource("Animation_mfdx6")
+}
+
 [node name="Truffler" type="CharacterBody3D"]
 collision_layer = 3
 script = ExtResource("1_5xvgk")
@@ -266,13 +313,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_64kxx")
 surface_material_override/1 = SubResource("StandardMaterial3D_g4ywk")
 
 [node name="Area3D" type="Area3D" parent="Node3D/Camera3D/Cube"]
-transform = Transform3D(-2.01208, 0, 3.03815e-07, 0, 2.01208, 0, -3.03815e-07, 0, -2.01208, -2.62018e-07, 0.000481455, 1.73527)
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -2.2878e-07, 0.000481461, 1.51514)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Camera3D/Cube/Area3D"]
-transform = Transform3D(1, 0, -2.71051e-20, 0, 1, 0, 2.71051e-20, 0, 1, -1.8474e-14, 0, 0.0999998)
 shape = SubResource("SphereShape3D_rar32")
 
 [node name="Decal" type="Decal" parent="Node3D/Camera3D/Cube"]
@@ -300,7 +346,7 @@ layers = 2
 material_override = SubResource("StandardMaterial3D_v0otl")
 cast_shadow = 0
 emitting = false
-amount = 64
+amount = 32
 collision_base_size = 0.5
 process_material = SubResource("ParticleProcessMaterial_fgby7")
 draw_pass_1 = SubResource("SphereMesh_wfuvv")
@@ -364,4 +410,49 @@ autoplay = true
 bus = &"SFX"
 
 [node name="Eatin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_vdn2f")
+
+[node name="Eating" type="CanvasLayer" parent="."]
+
+[node name="Left" type="Label" parent="Eating"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 100.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="Label" parent="Eating"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Eat" type="Label" parent="Eating"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 118.0
+grow_horizontal = 2
+pivot_offset = Vector2(576, 59)
+theme_override_font_sizes/font_size = 74
+text = "EAT!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Eating"]
+autoplay = "EAT"
+libraries = {
+"": SubResource("AnimationLibrary_ea7g5")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Eating"]
 stream = ExtResource("13_vdn2f")

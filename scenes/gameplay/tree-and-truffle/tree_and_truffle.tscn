@@ -57,7 +57,6 @@ visible = false
 material_override = SubResource("StandardMaterial3D_1dw7m")
 
 [node name="tree001" parent="trees" index="1"]
-visible = false
 material_override = SubResource("StandardMaterial3D_qlv8d")
 lod_bias = 0.1
 

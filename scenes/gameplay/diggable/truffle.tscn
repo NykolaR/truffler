@@ -1,35 +1,35 @@
 [gd_scene load_steps=9 format=3 uid="uid://cncgncur621o7"]
 
-[sub_resource type="Gradient" id="Gradient_fnlga"]
+[sub_resource type="Gradient" id="Gradient_uis6d"]
 colors = PackedColorArray(0, 0, 0, 1, 0.252028, 0.252028, 0.252028, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_grl0h"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3t0tk"]
 seed = 4568
 frequency = 0.25
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gq065"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_03r36"]
 seamless = true
-color_ramp = SubResource("Gradient_fnlga")
-noise = SubResource("FastNoiseLite_grl0h")
+color_ramp = SubResource("Gradient_uis6d")
+noise = SubResource("FastNoiseLite_3t0tk")
 
-[sub_resource type="Gradient" id="Gradient_n7ktd"]
+[sub_resource type="Gradient" id="Gradient_8a8vl"]
 colors = PackedColorArray(0, 0, 0, 1, 0.877616, 0.877616, 0.877616, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_t7syo"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_186os"]
 seed = 4568
 frequency = 0.25
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_me5eb"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_oj2sl"]
 seamless = true
-color_ramp = SubResource("Gradient_n7ktd")
-noise = SubResource("FastNoiseLite_t7syo")
+color_ramp = SubResource("Gradient_8a8vl")
+noise = SubResource("FastNoiseLite_186os")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udy40"]
-albedo_texture = SubResource("NoiseTexture2D_gq065")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd8lh"]
+albedo_texture = SubResource("NoiseTexture2D_03r36")
 heightmap_enabled = true
-heightmap_texture = SubResource("NoiseTexture2D_me5eb")
+heightmap_texture = SubResource("NoiseTexture2D_oj2sl")
 
-[sub_resource type="SphereMesh" id="SphereMesh_5k6r4"]
+[sub_resource type="SphereMesh" id="SphereMesh_yktc2"]
 radius = 0.1
 height = 0.2
 radial_segments = 16
@@ -38,8 +38,8 @@ rings = 8
 [node name="Truffle" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_udy40")
-mesh = SubResource("SphereMesh_5k6r4")
+material_override = SubResource("StandardMaterial3D_bd8lh")
+mesh = SubResource("SphereMesh_yktc2")
 
 [node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
 strength = 5.0
