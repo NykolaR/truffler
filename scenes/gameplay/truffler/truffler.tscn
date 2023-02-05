@@ -158,38 +158,44 @@ shape = SubResource("SphereShape3D_ijwsf")
 visible = false
 mesh = SubResource("SphereMesh_2cnej")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.257862, -0.45575)
 current = true
 
-[node name="Cube" type="MeshInstance3D" parent="Camera3D"]
+[node name="Cube" type="MeshInstance3D" parent="Node3D/Camera3D"]
 transform = Transform3D(-0.497, 0, -7.50449e-08, 0, 0.497, 0, 7.50449e-08, 0, -0.497, 0, -0.250239, 0.493084)
 mesh = SubResource("ArrayMesh_kk0qv")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_64kxx")
 surface_material_override/1 = SubResource("StandardMaterial3D_g4ywk")
 
-[node name="Area3D" type="Area3D" parent="Camera3D/Cube"]
-transform = Transform3D(-2.01207, 0, 3.03814e-07, 0, 2.01207, 0, -3.03814e-07, 0, -2.01207, -2.31636e-07, 0.000481574, 1.53406)
+[node name="Area3D" type="Area3D" parent="Node3D/Camera3D/Cube"]
+transform = Transform3D(-2.01208, 0, 3.03815e-07, 0, 2.01208, 0, -3.03815e-07, 0, -2.01208, -2.62018e-07, 0.000481455, 1.73527)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/Cube/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Camera3D/Cube/Area3D"]
+transform = Transform3D(1, 0, -2.71051e-20, 0, 1, 0, 2.71051e-20, 0, 1, -1.8474e-14, 0, 0.0999998)
 shape = SubResource("SphereShape3D_rar32")
 
-[node name="lil-oink" type="Node3D" parent="Camera3D"]
+[node name="Decal" type="Decal" parent="Node3D/Camera3D/Cube"]
+transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, -2.35594e-07, 0, 1.56027)
+
+[node name="lil-oink" type="Node3D" parent="Node3D/Camera3D"]
 transform = Transform3D(-0.433, 0, -6.53812e-08, 0, 0.433, 0, 6.53812e-08, 0, -0.433, 0, -0.234394, 0.40575)
 visible = false
 
-[node name="Cube" type="MeshInstance3D" parent="Camera3D/lil-oink"]
+[node name="Cube" type="MeshInstance3D" parent="Node3D/Camera3D/lil-oink"]
 mesh = SubResource("ArrayMesh_bretk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_64kxx")
 surface_material_override/1 = SubResource("StandardMaterial3D_g4ywk")
 
-[node name="Snout" type="MeshInstance3D" parent="Camera3D"]
+[node name="Snout" type="MeshInstance3D" parent="Node3D/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -0.0193425)
 visible = false
 mesh = SubResource("BoxMesh_epxoj")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")

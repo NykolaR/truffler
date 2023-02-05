@@ -1,15 +1,16 @@
 extends CharacterBody3D
 
 
-const SPEED: float = 5.0
+const SPEED: float = 1.0
 const JUMP_VELOCITY: float = 4.5
-const LOOK_CONSTRAINT: float = 60.0
+const LOOK_CONSTRAINT_UP: float = 40.0
+const LOOK_CONSTRAINT_DOWN: float = 75.0
 
 var sense: float = 5.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-@onready var camera: Camera3D = $Camera3D as Camera3D
+@onready var camera: Node3D = $Node3D as Node3D
 
 func _physics_process(delta: float):
 	_camera(delta)
@@ -25,7 +26,7 @@ func _camera(delta: float) -> void:
 	
 	rotate_y(-input_dir.x * delta * sense)
 	camera.rotate_x(-input_dir.y * delta * sense)
-	camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -LOOK_CONSTRAINT, LOOK_CONSTRAINT)
+	camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -LOOK_CONSTRAINT_DOWN, LOOK_CONSTRAINT_UP)
 
 
 func _movement(delta: float) -> void:
