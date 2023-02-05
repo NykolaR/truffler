@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://drxifqvekuq1d"
+path="res://.godot/imported/Pig Walking Footsteps Loop.ogg-3fa6773d5ced03182d38c7fd1ddb47fc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Pig_Walking_Footsteps_Loop.ogg/Pig Walking Footsteps Loop.ogg"
+dest_files=["res://.godot/imported/Pig Walking Footsteps Loop.ogg-3fa6773d5ced03182d38c7fd1ddb47fc.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

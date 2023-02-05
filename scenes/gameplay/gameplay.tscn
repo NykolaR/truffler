@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds4yvw8k60dxl"]
+[gd_scene load_steps=13 format=3 uid="uid://ds4yvw8k60dxl"]
 
 [ext_resource type="PackedScene" uid="uid://dyp2dlbs1b5nf" path="res://scenes/gameplay/truffler/truffler.tscn" id="1_lruwe"]
 [ext_resource type="PackedScene" uid="uid://dbe1nxiif2hwi" path="res://scenes/gameplay/tower/tower.tscn" id="2_q1kx1"]
 [ext_resource type="Texture2D" uid="uid://gf446g2ece52" path="res://assets/hdri/preller_drive_1k.hdr" id="3_au3i3"]
 [ext_resource type="PackedScene" uid="uid://ddfwug2avfemy" path="res://scenes/gameplay/diggable/diggable.tscn" id="4_bmqoa"]
+[ext_resource type="PackedScene" uid="uid://cncgncur621o7" path="res://scenes/gameplay/diggable/truffle.tscn" id="5_y6s3m"]
+[ext_resource type="AudioStream" uid="uid://c6ukix5vvvx6p" path="res://assets/audio/sfx/Field Ambience.wav/Field Ambience.wav" id="6_qbmda"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qo2cy"]
 size = Vector3(10, 1, 10)
@@ -38,6 +40,7 @@ size = Vector3(2, 2, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+visible = false
 mesh = SubResource("BoxMesh_qo2cy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
@@ -67,5 +70,23 @@ spot_angle = 12.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.268271, 7.28485, 6.93236)
 mesh = SubResource("BoxMesh_u8yex")
 
-[node name="Diggable" parent="." instance=ExtResource("4_bmqoa")]
-transform = Transform3D(-0.834069, 0, 0.55166, 0, 1, 0, -0.55166, 0, -0.834069, 0, -0.5, -2)
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+size = Vector3(10, 1, 10)
+
+[node name="Diggable" parent="CSGBox3D" instance=ExtResource("4_bmqoa")]
+transform = Transform3D(-0.834069, 0, 0.55166, 0, 1, 0, -0.55166, 0, -0.834069, 0, 0, -2)
+
+[node name="Truffle" parent="." instance=ExtResource("5_y6s3m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.59148, 7.33074, -12.6693)
+
+[node name="Truffle2" parent="." instance=ExtResource("5_y6s3m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85867, 7.8201, -12.6693)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qbmda")
+volume_db = -3.0
+autoplay = true
+bus = &"Music"

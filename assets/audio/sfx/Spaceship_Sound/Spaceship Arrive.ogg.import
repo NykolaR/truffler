@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhm3gkuceilr4"
+path="res://.godot/imported/Spaceship Arrive.ogg-e9a93d2f8dd3d855fbd0e4370c165dab.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Spaceship_Sound/Spaceship Arrive.ogg"
+dest_files=["res://.godot/imported/Spaceship Arrive.ogg-e9a93d2f8dd3d855fbd0e4370c165dab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

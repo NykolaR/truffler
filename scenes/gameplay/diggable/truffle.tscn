@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cncgncur621o7"]
+
+[sub_resource type="Gradient" id="Gradient_fnlga"]
+colors = PackedColorArray(0, 0, 0, 1, 0.252028, 0.252028, 0.252028, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_grl0h"]
+seed = 4568
+frequency = 0.25
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gq065"]
+seamless = true
+color_ramp = SubResource("Gradient_fnlga")
+noise = SubResource("FastNoiseLite_grl0h")
+
+[sub_resource type="Gradient" id="Gradient_n7ktd"]
+colors = PackedColorArray(0, 0, 0, 1, 0.877616, 0.877616, 0.877616, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_t7syo"]
+seed = 4568
+frequency = 0.25
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_me5eb"]
+seamless = true
+color_ramp = SubResource("Gradient_n7ktd")
+noise = SubResource("FastNoiseLite_t7syo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udy40"]
+albedo_texture = SubResource("NoiseTexture2D_gq065")
+heightmap_enabled = true
+heightmap_texture = SubResource("NoiseTexture2D_me5eb")
+
+[sub_resource type="SphereMesh" id="SphereMesh_5k6r4"]
+radius = 0.1
+height = 0.2
+radial_segments = 16
+rings = 8
+
+[node name="Truffle" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_udy40")
+mesh = SubResource("SphereMesh_5k6r4")
+
+[node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
+strength = 5.0
+attenuation = 2.0
+radius = 30.0
+
+[node name="GPUParticlesCollisionSphere3D" type="GPUParticlesCollisionSphere3D" parent="."]
+radius = 2.0
