@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://d2pmmn8arft00"]
+[gd_scene load_steps=35 format=3 uid="uid://d2pmmn8arft00"]
 
 [ext_resource type="PackedScene" uid="uid://dyp2dlbs1b5nf" path="res://scenes/gameplay/truffler/truffler.tscn" id="1_8avf8"]
 [ext_resource type="Script" path="res://scenes/gameplay/level/level.gd" id="1_f3j8k"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ddfwug2avfemy" path="res://scenes/gameplay/diggable/diggable.tscn" id="5_dpdmb"]
 [ext_resource type="PackedScene" uid="uid://d0jupieo2v7fd" path="res://scenes/gameplay/tree-and-truffle/tree_and_truffle.tscn" id="7_5owp0"]
 [ext_resource type="PackedScene" uid="uid://2cc0ye03vwer" path="res://assets/models/lil-oink.gltf" id="7_mm3by"]
+[ext_resource type="PackedScene" uid="uid://dbe1nxiif2hwi" path="res://scenes/gameplay/tower/tower.tscn" id="8_wokp7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l18t1"]
 albedo_color = Color(0, 0.564706, 0.231373, 1)
@@ -91,6 +92,7 @@ sky_material = SubResource("PanoramaSkyMaterial_x4kjg")
 [sub_resource type="Environment" id="Environment_5k8v7"]
 background_mode = 2
 sky = SubResource("Sky_rpann")
+ambient_light_sky_contribution = 0.1
 tonemap_mode = 2
 tonemap_white = 16.0
 volumetric_fog_enabled = true
@@ -1858,6 +1860,27 @@ transform = Transform3D(0.0343354, -3.8851e-14, -0.0363467, 1.9676e-12, 0.05, 1.
 
 [node name="Diggable396" parent="CSGMesh3D" instance=ExtResource("5_dpdmb")]
 transform = Transform3D(0.0174826, 1.0033e-12, -0.046844, 1.9676e-12, 0.05, 1.8051e-12, 0.046844, -2.47451e-12, 0.0174826, -8.41204, 0.577036, 0.530753)
+
+[node name="Tower" parent="." instance=ExtResource("8_wokp7")]
+transform = Transform3D(-1, 0, 1.03316e-07, 0, 1, 0, -1.03316e-07, 0, -1, -141.454, 0.300725, 39.6698)
+
+[node name="Tower2" parent="." instance=ExtResource("8_wokp7")]
+transform = Transform3D(-1, 0, 1.03316e-07, 0, 1, 0, -1.03316e-07, 0, -1, -67.3828, 0.300725, 39.6698)
+
+[node name="Tower3" parent="." instance=ExtResource("8_wokp7")]
+transform = Transform3D(-1, 0, 1.03316e-07, 0, 1, 0, -1.03316e-07, 0, -1, 0.736954, 0.300725, 39.6698)
+
+[node name="Tower4" parent="." instance=ExtResource("8_wokp7")]
+transform = Transform3D(1, 0, -1.58932e-08, 0, 1, 0, 1.58932e-08, 0, 1, 0.736954, 0.300725, -41.9265)
+
+[node name="Tower5" parent="." instance=ExtResource("8_wokp7")]
+transform = Transform3D(1, 0, -1.58932e-08, 0, 1, 0, 1.58932e-08, 0, 1, -67.7646, 0.300725, -41.9265)
+
+[node name="Tower6" parent="." instance=ExtResource("8_wokp7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -13.5133, 3.76758, -3.65909)
+
+[node name="Tower7" parent="." instance=ExtResource("8_wokp7")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 34.5916, 3.5047, -3.65909)
 
 [node name="AllTheTrees2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -182.329, -0.0120925, -35.2163)
