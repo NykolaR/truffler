@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d0jupieo2v7fd" path="res://scenes/gameplay/tree-and-truffle/tree_and_truffle.tscn" id="7_5owp0"]
 [ext_resource type="PackedScene" uid="uid://2cc0ye03vwer" path="res://assets/models/lil-oink.gltf" id="7_mm3by"]
 [ext_resource type="PackedScene" uid="uid://dbe1nxiif2hwi" path="res://scenes/gameplay/tower/tower.tscn" id="8_wokp7"]
-[ext_resource type="PackedScene" uid="uid://dlh2f6afl6hvq" path="res://scenes/ufo.tscn" id="9_faeeh"]
+[ext_resource type="PackedScene" uid="uid://budgib54ndd6c" path="res://scenes/ufo.tscn" id="9_faeeh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l18t1"]
 albedo_color = Color(0, 0.564706, 0.231373, 1)
