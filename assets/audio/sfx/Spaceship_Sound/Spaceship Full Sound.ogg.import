@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjriafiicv5co"
+path="res://.godot/imported/Spaceship Full Sound.ogg-8526613360d4afb2d29e25263371c2be.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Spaceship_Sound/Spaceship Full Sound.ogg"
+dest_files=["res://.godot/imported/Spaceship Full Sound.ogg-8526613360d4afb2d29e25263371c2be.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

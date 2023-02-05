@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dy6xaui03ulee"
+path="res://.godot/imported/Digging Snort 1.ogg-b171a3aee3b6774fcee6ffd45a2538f6.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Digging_Audio/Digging Snort 1.ogg"
+dest_files=["res://.godot/imported/Digging Snort 1.ogg-b171a3aee3b6774fcee6ffd45a2538f6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

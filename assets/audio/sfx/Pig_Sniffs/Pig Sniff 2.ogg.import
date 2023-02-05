@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8574iyxcfdfu"
+path="res://.godot/imported/Pig Sniff 2.ogg-214bb28b80821ab02c00bc7c4d810d70.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Pig_Sniffs/Pig Sniff 2.ogg"
+dest_files=["res://.godot/imported/Pig Sniff 2.ogg-214bb28b80821ab02c00bc7c4d810d70.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

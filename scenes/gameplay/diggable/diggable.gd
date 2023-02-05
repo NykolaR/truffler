@@ -6,7 +6,6 @@ var nose: Node3D = null
 @onready var dig_sprite: Sprite2D = $SubViewport/Sprite2D as Sprite2D
 @onready var viewport: SubViewport = $SubViewport as SubViewport
 
-
 func _ready() -> void:
 	viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_NEVER
 
