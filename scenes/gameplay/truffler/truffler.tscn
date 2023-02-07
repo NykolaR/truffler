@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bwr0qkrpmcy42" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 1.ogg" id="2_tklm0"]
 [ext_resource type="Script" path="res://scenes/gameplay/truffler/eater.gd" id="2_twrna"]
 [ext_resource type="AudioStream" uid="uid://4s03wypuqmxj" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 2.ogg" id="3_dvtux"]
-[ext_resource type="AudioStream" uid="uid://c5p2c5cyir8i5" path="res://assets/audio/sfx/Success_Sound_Mono.ogg/Success Sound Mono.ogg" id="4_b8wax"]
+[ext_resource type="AudioStream" uid="uid://c5p2c5cyir8i5" path="res://assets/audio/sfx/Success_Sound_Mono/Success Sound Mono.ogg" id="4_b8wax"]
 [ext_resource type="AudioStream" uid="uid://whuxlv4qho73" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 3.ogg" id="4_rjbww"]
 [ext_resource type="AudioStream" uid="uid://3pcyhtu1tnoe" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 4.ogg" id="5_qv227"]
 [ext_resource type="AudioStream" uid="uid://bbyjon7r17tce" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 5.ogg" id="6_kmx1v"]
@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://3hss6y5tnco5" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 8.ogg" id="9_4pfx8"]
 [ext_resource type="AudioStream" uid="uid://0liirfkqwjhs" path="res://assets/audio/sfx/Pig_Sniffs/Pig Sniff 1.ogg" id="10_io3w7"]
 [ext_resource type="AudioStream" uid="uid://c8574iyxcfdfu" path="res://assets/audio/sfx/Pig_Sniffs/Pig Sniff 2.ogg" id="11_v7fkt"]
-[ext_resource type="AudioStream" uid="uid://drxifqvekuq1d" path="res://assets/audio/sfx/Pig_Walking_Footsteps_Loop.ogg/Pig Walking Footsteps Loop.ogg" id="12_0p2wr"]
+[ext_resource type="AudioStream" uid="uid://drxifqvekuq1d" path="res://assets/audio/sfx/Pig_Walking_Footsteps_Loop/Pig Walking Footsteps Loop.ogg" id="12_0p2wr"]
 [ext_resource type="AudioStream" uid="uid://nashqu6wc7n6" path="res://assets/audio/music/Truffling_Mini_Game_Music_Draft.wav" id="13_vdn2f"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ijwsf"]

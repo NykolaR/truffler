@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ctqk1441d12sm"
+path="res://.godot/imported/Scary Bells Mono.ogg-346b739c41564d58a1757fcff0b678fc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Scary_Bells_Mono/Scary Bells Mono.ogg"
+dest_files=["res://.godot/imported/Scary Bells Mono.ogg-346b739c41564d58a1757fcff0b678fc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

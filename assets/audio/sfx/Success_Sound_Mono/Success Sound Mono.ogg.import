@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5p2c5cyir8i5"
+path="res://.godot/imported/Success Sound Mono.ogg-8b18f86bde8c8b19c626cdfd07a2dae6.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Success_Sound_Mono/Success Sound Mono.ogg"
+dest_files=["res://.godot/imported/Success Sound Mono.ogg-8b18f86bde8c8b19c626cdfd07a2dae6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

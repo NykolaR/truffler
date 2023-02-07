@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c6ukix5vvvx6p"
-path="res://.godot/imported/Field Ambience.wav-112b573c69199534078ffd927f310709.sample"
+path="res://.godot/imported/Field Ambience.wav-1dbdfb839bcec31e301296c6db1d69dc.sample"
 
 [deps]
 
-source_file="res://assets/audio/sfx/Field Ambience.wav/Field Ambience.wav"
-dest_files=["res://.godot/imported/Field Ambience.wav-112b573c69199534078ffd927f310709.sample"]
+source_file="res://assets/audio/sfx/Field Ambience/Field Ambience.wav"
+dest_files=["res://.godot/imported/Field Ambience.wav-1dbdfb839bcec31e301296c6db1d69dc.sample"]
 
 [params]
 

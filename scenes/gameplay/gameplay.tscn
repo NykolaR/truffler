@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://gf446g2ece52" path="res://assets/hdri/preller_drive_1k.hdr" id="3_au3i3"]
 [ext_resource type="PackedScene" uid="uid://ddfwug2avfemy" path="res://scenes/gameplay/diggable/diggable.tscn" id="4_bmqoa"]
 [ext_resource type="PackedScene" uid="uid://cncgncur621o7" path="res://scenes/gameplay/diggable/truffle.tscn" id="5_y6s3m"]
-[ext_resource type="AudioStream" uid="uid://c6ukix5vvvx6p" path="res://assets/audio/sfx/Field Ambience.wav/Field Ambience.wav" id="6_qbmda"]
+[ext_resource type="AudioStream" uid="uid://c6ukix5vvvx6p" path="res://assets/audio/sfx/Field Ambience/Field Ambience.wav" id="6_qbmda"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qo2cy"]
 size = Vector3(10, 1, 10)
