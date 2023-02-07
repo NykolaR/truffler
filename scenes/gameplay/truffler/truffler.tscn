@@ -259,7 +259,7 @@ rings = 4
 
 [sub_resource type="Animation" id="Animation_d7hoa"]
 resource_name = "me_sniff"
-length = 1.27
+length = 1.25
 loop_mode = 1
 tracks/0/type = "audio"
 tracks/0/imported = false

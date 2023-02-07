@@ -44,9 +44,9 @@ func _physics_process(delta: float):
 		smellovision.emitting = Input.is_action_pressed("smelly")
 		var tween: Tween = get_tree().create_tween()
 		if smellovision.emitting:
-			tween.tween_property(sniff_player, "volume_db", 0.0, 0.5)
+			tween.tween_property(sniff_player, "volume_db", -6.0, 1.0)
 		else:
-			tween.tween_property(sniff_player, "volume_db", -80.0, 0.5)
+			tween.tween_property(sniff_player, "volume_db", -80.0, 1.0)
 
 func _camera(delta: float) -> void:
 	var input_dir: Vector2 = Input.get_vector("look_left", "look_right", "look_up", "look_down")

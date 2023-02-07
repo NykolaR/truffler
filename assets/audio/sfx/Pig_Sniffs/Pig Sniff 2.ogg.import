@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Pig Sniff 2.ogg-214bb28b80821ab02c00bc7c4d810
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0.0
 bpm=0.0
 beat_count=0

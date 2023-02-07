@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://d2pmmn8arft00"]
+[gd_scene load_steps=40 format=3 uid="uid://d2pmmn8arft00"]
 
 [ext_resource type="PackedScene" uid="uid://dyp2dlbs1b5nf" path="res://scenes/gameplay/truffler/truffler.tscn" id="1_8avf8"]
 [ext_resource type="Script" path="res://scenes/gameplay/level/level.gd" id="1_f3j8k"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://2cc0ye03vwer" path="res://assets/models/lil-oink.gltf" id="7_mm3by"]
 [ext_resource type="PackedScene" uid="uid://dbe1nxiif2hwi" path="res://scenes/gameplay/tower/tower.tscn" id="8_wokp7"]
 [ext_resource type="PackedScene" uid="uid://dlh2f6afl6hvq" path="res://scenes/ufo.tscn" id="9_faeeh"]
+[ext_resource type="AudioStream" uid="uid://c6ukix5vvvx6p" path="res://assets/audio/sfx/Field Ambience/Field Ambience.wav" id="9_liylx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l18t1"]
 albedo_color = Color(0.192157, 0.478431, 0.313726, 1)
@@ -2573,3 +2574,11 @@ transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 
 light_color = Color(0.372549, 0.564706, 0.654902, 1)
 light_energy = 0.5
 light_volumetric_fog_energy = 1.5
+shadow_opacity = 0.2
+shadow_blur = 8.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_liylx")
+volume_db = -6.0
+autoplay = true
+bus = &"Music"

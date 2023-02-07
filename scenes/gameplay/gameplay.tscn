@@ -98,7 +98,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85867, 7.8201, -12.6693)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_qbmda")
-volume_db = -3.0
 autoplay = true
 bus = &"Music"
 
