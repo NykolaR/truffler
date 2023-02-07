@@ -34,9 +34,10 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(delta: float):
 	_camera(delta)
+	
 	_movement(delta)
 	var movement: Vector2 = Vector2(velocity.x, velocity.z)
-	walkies.volume_db = clamp(linear_to_db(clamp(movement.length_squared()/3.0, 0.0, 1.0)), -80.0, -3.0)
+	walkies.volume_db = clamp(linear_to_db(clamp(movement.length_squared()/5.0, 0.0, 1.0)), -80.0, -16.0)
 	move_and_slide()
 	
 	if not smellovision.emitting == Input.is_action_pressed("smelly"):
@@ -69,6 +70,8 @@ func _movement(delta: float) -> void:
 	var input_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 	var intensity: float = clamp(input_dir.length(), 0, 1)
 	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * intensity
+	if smellovision.emitting:
+		direction = Vector3.ZERO
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED

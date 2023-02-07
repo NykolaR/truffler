@@ -1,8 +1,10 @@
-[gd_scene load_steps=46 format=3 uid="uid://dyp2dlbs1b5nf"]
+[gd_scene load_steps=49 format=3 uid="uid://dyp2dlbs1b5nf"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/truffler/truffler.gd" id="1_5xvgk"]
 [ext_resource type="AudioStream" uid="uid://bwr0qkrpmcy42" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 1.ogg" id="2_tklm0"]
+[ext_resource type="Script" path="res://scenes/gameplay/truffler/eater.gd" id="2_twrna"]
 [ext_resource type="AudioStream" uid="uid://4s03wypuqmxj" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 2.ogg" id="3_dvtux"]
+[ext_resource type="AudioStream" uid="uid://c5p2c5cyir8i5" path="res://assets/audio/sfx/Success_Sound_Mono.ogg/Success Sound Mono.ogg" id="4_b8wax"]
 [ext_resource type="AudioStream" uid="uid://whuxlv4qho73" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 3.ogg" id="4_rjbww"]
 [ext_resource type="AudioStream" uid="uid://3pcyhtu1tnoe" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 4.ogg" id="5_qv227"]
 [ext_resource type="AudioStream" uid="uid://bbyjon7r17tce" path="res://assets/audio/sfx/Pig_Oinks_and_Squeals/Oink 5.ogg" id="6_kmx1v"]
@@ -104,6 +106,47 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="SphereShape3D" id="SphereShape3D_rar32"]
 radius = 0.1
 
+[sub_resource type="Animation" id="Animation_lxgk3"]
+resource_name = "EAT"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eat:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9)]
+}
+
+[sub_resource type="Animation" id="Animation_mfdx6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eat:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ea7g5"]
+_data = {
+"EAT": SubResource("Animation_lxgk3"),
+"RESET": SubResource("Animation_mfdx6")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_iro3f"]
+radius = 0.1
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hsvg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewkyv"]
@@ -178,14 +221,14 @@ vertex_color_use_as_albedo = true
 albedo_texture = SubResource("NoiseTexture2D_ux60d")
 
 [sub_resource type="Gradient" id="Gradient_go7m2"]
-colors = PackedColorArray(1, 1, 1, 0.286275, 1, 1, 1, 0)
+colors = PackedColorArray(1, 1, 1, 0.392157, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_jmklu"]
 gradient = SubResource("Gradient_go7m2")
 
 [sub_resource type="Curve" id="Curve_6jgrg"]
 max_value = 3.0
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1.47273), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_jjbp1"]
@@ -194,7 +237,11 @@ curve = SubResource("Curve_6jgrg")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fgby7"]
 emission_shape = 1
 emission_sphere_radius = 0.05
+direction = Vector3(0, 1, 0)
+spread = 10.0
 gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
 angle_min = -720.0
 angle_max = 720.0
 scale_curve = SubResource("CurveTexture_jjbp1")
@@ -250,44 +297,6 @@ _data = {
 "me_sniff": SubResource("Animation_d7hoa")
 }
 
-[sub_resource type="Animation" id="Animation_lxgk3"]
-resource_name = "EAT"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Eat:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.9, 0.9)]
-}
-
-[sub_resource type="Animation" id="Animation_mfdx6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Eat:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ea7g5"]
-_data = {
-"EAT": SubResource("Animation_lxgk3"),
-"RESET": SubResource("Animation_mfdx6")
-}
-
 [node name="Truffler" type="CharacterBody3D"]
 collision_layer = 3
 script = ExtResource("1_5xvgk")
@@ -324,6 +333,67 @@ shape = SubResource("SphereShape3D_rar32")
 [node name="Decal" type="Decal" parent="Node3D/Camera3D/Cube"]
 transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, -2.35594e-07, 0, 1.56027)
 
+[node name="Eater" type="Area3D" parent="Node3D/Camera3D/Cube"]
+transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, -2.43052e-07, 0, 1.60966)
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+script = ExtResource("2_twrna")
+
+[node name="Eating" type="CanvasLayer" parent="Node3D/Camera3D/Cube/Eater"]
+visible = false
+
+[node name="Left" type="Label" parent="Node3D/Camera3D/Cube/Eater/Eating"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 100.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="Label" parent="Node3D/Camera3D/Cube/Eater/Eating"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Eat" type="Label" parent="Node3D/Camera3D/Cube/Eater/Eating"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 118.0
+grow_horizontal = 2
+pivot_offset = Vector2(576, 59)
+theme_override_font_sizes/font_size = 74
+text = "EAT!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D/Camera3D/Cube/Eater/Eating"]
+autoplay = "EAT"
+libraries = {
+"": SubResource("AnimationLibrary_ea7g5")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node3D/Camera3D/Cube/Eater/Eating"]
+stream = ExtResource("13_vdn2f")
+volume_db = -80.0
+autoplay = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/Camera3D/Cube/Eater"]
+shape = SubResource("SphereShape3D_iro3f")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node3D/Camera3D/Cube/Eater"]
+stream = ExtResource("4_b8wax")
+
 [node name="lil-oink" type="Node3D" parent="Node3D/Camera3D"]
 transform = Transform3D(-0.433, 0, -6.53812e-08, 0, 0.433, 0, 6.53812e-08, 0, -0.433, 0, -0.234394, 0.40575)
 visible = false
@@ -340,6 +410,11 @@ visible = false
 mesh = SubResource("BoxMesh_epxoj")
 skeleton = NodePath("../../..")
 
+[node name="SpotLight3D" type="OmniLight3D" parent="Node3D/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.5)
+light_energy = 0.1
+light_volumetric_fog_energy = 0.0
+
 [node name="Smellovision" type="GPUParticles3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.858314)
 layers = 2
@@ -347,6 +422,7 @@ material_override = SubResource("StandardMaterial3D_v0otl")
 cast_shadow = 0
 emitting = false
 amount = 32
+lifetime = 2.0
 collision_base_size = 0.5
 process_material = SubResource("ParticleProcessMaterial_fgby7")
 draw_pass_1 = SubResource("SphereMesh_wfuvv")
@@ -406,54 +482,12 @@ libraries = {
 
 [node name="Walkies" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_0p2wr")
+volume_db = -80.0
 autoplay = true
 bus = &"SFX"
 
 [node name="Eatin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_vdn2f")
 
-[node name="Eating" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="Left" type="Label" parent="Eating"]
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 100.0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 72
-text = "L"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Right" type="Label" parent="Eating"]
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -100.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 72
-text = "R"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Eat" type="Label" parent="Eating"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 118.0
-grow_horizontal = 2
-pivot_offset = Vector2(576, 59)
-theme_override_font_sizes/font_size = 74
-text = "EAT!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Eating"]
-autoplay = "EAT"
-libraries = {
-"": SubResource("AnimationLibrary_ea7g5")
-}
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Eating"]
-stream = ExtResource("13_vdn2f")
+[connection signal="area_entered" from="Node3D/Camera3D/Cube/Eater" to="Node3D/Camera3D/Cube/Eater" method="_on_area_entered"]
+[connection signal="area_exited" from="Node3D/Camera3D/Cube/Eater" to="Node3D/Camera3D/Cube/Eater" method="_on_area_exited"]

@@ -4,6 +4,9 @@ const truffle = preload("res://scenes/gameplay/diggable/truffle.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
+	randomize()
+	randomize()
 	var children = $CSGMesh3D.get_children()
 	for child in children:
 		var child_copy = child as Node3D

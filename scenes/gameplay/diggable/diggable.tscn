@@ -1,7 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://ddfwug2avfemy"]
+[gd_scene load_steps=17 format=3 uid="uid://ddfwug2avfemy"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/diggable/diggable.gd" id="1_3ugmk"]
 [ext_resource type="Shader" path="res://scenes/gameplay/diggable/diggable.gdshader" id="2_8hbot"]
+[ext_resource type="ArrayMesh" uid="uid://jj876yq8bx2j" path="res://assets/models/dirt.obj" id="3_7qane"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlofp"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="Gradient" id="Gradient_isvo0"]
 colors = PackedColorArray(1, 1, 1, 0.176471, 1, 1, 1, 0)
@@ -25,7 +32,7 @@ seamless = true
 color_ramp = SubResource("Gradient_6mpco")
 noise = SubResource("FastNoiseLite_c0mvu")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ecy8p"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_l7c6o"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Gradient" id="Gradient_ox5hv"]
@@ -42,7 +49,7 @@ fill_to = Vector2(0.5, 0.104651)
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("2_8hbot")
-shader_parameter/heightmap = SubResource("ViewportTexture_ecy8p")
+shader_parameter/heightmap = SubResource("ViewportTexture_l7c6o")
 shader_parameter/set_height = SubResource("GradientTexture2D_l6w7d")
 shader_parameter/dirt_tex = SubResource("NoiseTexture2D_msdao")
 
@@ -52,15 +59,18 @@ subdivide_width = 6
 subdivide_depth = 6
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lejue"]
-size = Vector3(1.2, 1.2, 1.5)
+size = Vector3(1.1, 1.1, 0.75)
+
+[sub_resource type="BoxMesh" id="BoxMesh_funa4"]
+size = Vector3(0.9, 0.9, 0.275)
 
 [node name="Diggable" type="CSGBox3D"]
-transparency = 1.0
+material_override = SubResource("StandardMaterial3D_jlofp")
 cast_shadow = 0
 operation = 2
 collision_layer = 0
 collision_mask = 4
-size = Vector3(0.95, 0.95, 0.524261)
+size = Vector3(0.95, 0.95, 0.32)
 script = ExtResource("1_3ugmk")
 
 [node name="SubViewport" type="SubViewport" parent="."]
@@ -71,22 +81,21 @@ positional_shadow_atlas_quad_1 = 0
 positional_shadow_atlas_quad_2 = 0
 positional_shadow_atlas_quad_3 = 0
 size = Vector2i(128, 128)
-render_target_clear_mode = 1
-render_target_update_mode = 1
+render_target_update_mode = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="SubViewport"]
-modulate = Color(1, 0, 0, 1)
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(64, 64)
-scale = Vector2(0.5, 0.5)
+position = Vector2(256, 256)
 texture = SubResource("GradientTexture2D_opuxv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.247571)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.003)
+visible = false
 material_override = SubResource("ShaderMaterial_hi7jt")
 mesh = SubResource("PlaneMesh_2xwgu")
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0476113)
 collision_layer = 0
 collision_mask = 4
 monitorable = false
@@ -95,7 +104,19 @@ monitorable = false
 shape = SubResource("BoxShape3D_lejue")
 
 [node name="truffle_spot" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.107125)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("BoxMesh_funa4")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, -0.0982711)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+material_override = SubResource("ShaderMaterial_hi7jt")
+mesh = ExtResource("3_7qane")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

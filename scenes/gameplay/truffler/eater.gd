@@ -20,7 +20,7 @@ func _input(event: InputEvent) -> void:
 		truff.scale -= Vector3(0.1, 0.1, 0.1)
 		var tween: Tween = get_tree().create_tween()
 		eat_audio.volume_db = 0.0
-		tween.tween_property(eat_audio, "volume_db", -80.0, 20.0)
+		tween.tween_property(eat_audio, "volume_db", -80.0, 10.0)
 		if truff.scale.length_squared() < 0.1:
 			truff.get_parent().queue_free()
 			_on_area_exited(null)
@@ -32,7 +32,7 @@ func _input(event: InputEvent) -> void:
 		truff.scale -= Vector3(0.1, 0.1, 0.1)
 		var tween: Tween = get_tree().create_tween()
 		eat_audio.volume_db = 0.0
-		tween.tween_property(eat_audio, "volume_db", -80.0, 20.0)
+		tween.tween_property(eat_audio, "volume_db", -80.0, 10.0)
 		if truff.scale.is_equal_approx(Vector3.ZERO):
 			truff.get_parent().queue_free()
 			_on_area_exited(null)

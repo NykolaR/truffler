@@ -95,7 +95,12 @@ background_mode = 2
 sky = SubResource("Sky_ae7ff")
 tonemap_mode = 2
 tonemap_white = 16.0
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
 volumetric_fog_enabled = true
+adjustment_enabled = true
+adjustment_contrast = 1.25
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjmet"]
 

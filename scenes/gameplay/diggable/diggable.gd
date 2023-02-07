@@ -9,8 +9,12 @@ var nose: Node3D = null
 var flag = false
 
 func _ready() -> void:
-	viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_NEVER
+	$Node3D/MeshInstance3D2.material_override.shader = $Node3D/MeshInstance3D2.material_override.shader.duplicate()
 	#set_physics_process(false)
+	await get_tree().create_timer(0.5).timeout
+	
+	viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_NEVER
+	viewport.render_target_update_mode = SubViewport.UPDATE_DISABLED
 
 func _physics_process(delta: float) -> void:
 	if not flag:
@@ -18,21 +22,23 @@ func _physics_process(delta: float) -> void:
 		flag = true
 		var space_state = get_world_3d().direct_space_state
 		var result = space_state.intersect_ray(ray)
-
+		
 		if not result.is_empty():
 			global_position = result.position
 			#global_position.y -= .25
-			#global_transform.basis.y = result.normal
+			#global_transform.basis = Basis.from_euler(result.normal, 5) # 0-5
 			look_at(global_position + result.normal, Vector3.UP)
-			global_position.y -= .24
+			global_position.y -= 0.15
 		set_physics_process(false)
+		return
+	
 	if nose:
 		var local_pos: Vector3 = to_local(nose.global_transform.origin)
 		var pos2d: Vector2 = Vector2(local_pos.x, local_pos.y)
 		pos2d.x = remap(pos2d.x, -0.5, 0.5, 0, 128)
 		pos2d.y = remap(pos2d.y, -0.5, 0.5, 0, 128)
 		dig_sprite.position = pos2d
-		dig_sprite.self_modulate.a = clamp(remap(local_pos.z, 0.25, 0.5, 1.5, 0), 0, 1.5)
+		dig_sprite.self_modulate.a = clamp(remap(local_pos.z, 0.2, -0.2, 1, 0), 0, 1)
 	else:
 		dig_sprite.self_modulate.a = 0.0
 	
