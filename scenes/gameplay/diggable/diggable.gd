@@ -27,7 +27,10 @@ func _physics_process(delta: float) -> void:
 			global_position = result.position
 			#global_position.y -= .25
 			#global_transform.basis = Basis.from_euler(result.normal, 5) # 0-5
-			look_at(global_position + result.normal, Vector3.UP)
+			if not Vector3.UP.dot(result.normal) == 1.0:
+				look_at(global_position + result.normal, Vector3.UP)
+			else:
+				rotation_degrees.x += 90
 			global_position.y -= 0.15
 		set_physics_process(false)
 		return
